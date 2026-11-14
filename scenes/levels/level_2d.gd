@@ -13,12 +13,17 @@ var pentagon_collected: bool = false
 @onready var camera: Camera2D = %Camera
 @onready var ball: Player2D = %Ball
 
+var current_hits: int = 0
+
 
 func _ready() -> void:
 	ball.obstacle_hit.connect(_on_obstacle_hit)
+	current_hits = min_hits_required
 
 	Globals.pentagon_collected.connect(set.bind(&"pentagon_collected", true))
 	Globals.level_completed.connect(_on_level_complete)
+
+	Globals.current_hits_changed.emit(clamp(current_hits, 0, 99))
 
 
 func apply_shake(amount: float) -> void:
@@ -37,8 +42,15 @@ func _process(delta: float) -> void:
 func _on_obstacle_hit() -> void:
 	apply_shake(3.0)
 
+	current_hits -= 1
+
+	Globals.current_hits_changed.emit(clamp(current_hits, 0, 99))
+
 
 func _on_level_complete() -> void:
+	if not current_hits <= 0:
+		return
+
 	ball.movement_disabled = true
 	Globals.completed_levels[level_id] = true
 

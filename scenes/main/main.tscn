@@ -4,8 +4,43 @@
 [ext_resource type="PackedScene" uid="uid://cne11b6o4xcdl" path="res://scenes/ui/title_screen.tscn" id="2_iuonh"]
 [ext_resource type="PackedScene" uid="uid://cpey7p5dp4tr1" path="res://scenes/ui/level_transition.tscn" id="3_k2fmo"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k2fmo"]
+distance = -362.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_as85p"]
+normal = Vector2(0, 1)
+distance = -362.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l3cfh"]
+normal = Vector2(1, 0)
+distance = -643.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6q06x"]
+normal = Vector2(-1, 0)
+distance = -643.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_as85p"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+
 [node name="Main" type="Node" unique_id=257091059]
 script = ExtResource("1_hyk8p")
+
+[node name="Bounds" type="Area2D" parent="." unique_id=1664566022]
+
+[node name="Bottom" type="CollisionShape2D" parent="Bounds" unique_id=1114992398]
+shape = SubResource("WorldBoundaryShape2D_k2fmo")
+
+[node name="Top" type="CollisionShape2D" parent="Bounds" unique_id=2017924683]
+shape = SubResource("WorldBoundaryShape2D_as85p")
+
+[node name="Left" type="CollisionShape2D" parent="Bounds" unique_id=1789822146]
+shape = SubResource("WorldBoundaryShape2D_l3cfh")
+
+[node name="Right" type="CollisionShape2D" parent="Bounds" unique_id=1187011476]
+shape = SubResource("WorldBoundaryShape2D_6q06x")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1389913331]
 
@@ -22,6 +57,28 @@ color = Color(0, 0, 0, 1)
 
 [node name="TitleScreen" parent="UI" unique_id=2008179970 instance=ExtResource("2_iuonh")]
 unique_name_in_owner = true
+visible = false
 
 [node name="LevelTransition" parent="UI" unique_id=128309869 instance=ExtResource("3_k2fmo")]
 visible = false
+
+[node name="HUD" type="PanelContainer" parent="UI" unique_id=1486115142]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_as85p")
+
+[node name="CurrentHits" type="Label" parent="UI/HUD" unique_id=1874229984]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "5"
+horizontal_alignment = 2
+
+[connection signal="body_entered" from="Bounds" to="." method="_on_bounds_body_entered"]

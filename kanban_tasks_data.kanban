@@ -13,16 +13,17 @@
 			"tasks": [
 				"bc7023d4-9fc7-4c99-9df4-183079703b16",
 				"a3013ec8-c374-41d7-b64b-28aba09d9969",
-				"d48dffa9-098e-4a88-9361-68a6c1736c54",
-				"516876dc-568e-4625-8de3-052683bde682",
 				"cff94f93-1bad-4d51-ab22-8d3fa99391ea",
-				"b55cbba3-68ca-4c69-a954-f33807aa72ec"
+				"b55cbba3-68ca-4c69-a954-f33807aa72ec",
+				"4ac2cc8e-cfb7-4786-90d2-fa1d9a61010d"
 			]
 		},
 		{
 			"uuid": "828bb566-867f-4d66-a165-dec5c7fbb0fa",
 			"title": "Doing",
-			"tasks": []
+			"tasks": [
+				"516876dc-568e-4625-8de3-052683bde682"
+			]
 		},
 		{
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
@@ -191,13 +192,6 @@
 			"steps": []
 		},
 		{
-			"uuid": "d48dffa9-098e-4a88-9361-68a6c1736c54",
-			"title": "Add ball motion blur",
-			"description": "",
-			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
-			"steps": []
-		},
-		{
 			"uuid": "516876dc-568e-4625-8de3-052683bde682",
 			"title": "Add player death",
 			"description": "",
@@ -214,6 +208,13 @@
 		{
 			"uuid": "b55cbba3-68ca-4c69-a954-f33807aa72ec",
 			"title": "Add bootsplash",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "4ac2cc8e-cfb7-4786-90d2-fa1d9a61010d",
+			"title": "Precompile particles",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []

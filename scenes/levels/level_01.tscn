@@ -1,18 +1,13 @@
 [gd_scene format=3 uid="uid://c4f18m7owfw4d"]
 
 [ext_resource type="PackedScene" uid="uid://dhu4mu7mc1ft2" path="res://scenes/player/ball.tscn" id="1_m802k"]
-[ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scenes/levels/level_01.gd" id="1_uvc87"]
+[ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scenes/levels/level_2d.gd" id="1_uvc87"]
 [ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="2_i2aat"]
-[ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="3_2djvx"]
-[ext_resource type="PackedScene" uid="uid://bmm0nbe82ftka" path="res://scenes/obstacles/string.tscn" id="5_qdh5e"]
-[ext_resource type="PackedScene" uid="uid://cc4rnfjdx76ny" path="res://scenes/obstacles/square.tscn" id="6_t0hvh"]
-[ext_resource type="PackedScene" uid="uid://cxtyusewlaaa3" path="res://scenes/obstacles/circle.tscn" id="7_kfebt"]
-[ext_resource type="PackedScene" uid="uid://cg46m5aphtvcl" path="res://scenes/obstacles/triangle.tscn" id="8_r72dd"]
-[ext_resource type="PackedScene" uid="uid://d7puovc8g6ot" path="res://scenes/player/pentagon.tscn" id="9_kfebt"]
 
 [node name="Level01" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_uvc87")
 canvas_color = Color(0.47058824, 0.84705883, 0.7176471, 1)
+min_hits_required = 1
 
 [node name="Camera" type="Camera2D" parent="." unique_id=271012844]
 unique_name_in_owner = true
@@ -23,33 +18,5 @@ process_callback = 0
 unique_name_in_owner = true
 
 [node name="Wall" parent="." unique_id=251030527 instance=ExtResource("2_i2aat")]
-position = Vector2(-142, -9)
-
-[node name="Wall3" parent="." unique_id=2119743309 instance=ExtResource("2_i2aat")]
-position = Vector2(293, -13)
-
-[node name="Wall2" parent="." unique_id=1849547708 instance=ExtResource("2_i2aat")]
-position = Vector2(335.00003, 185)
-rotation = -0.7853982
-
-[node name="WeakWall" parent="." unique_id=2105004682 instance=ExtResource("3_2djvx")]
-position = Vector2(14, -139)
-rotation = 1.5707964
-
-[node name="String" parent="." unique_id=1139074267 node_paths=PackedStringArray("target_obstacle") instance=ExtResource("5_qdh5e")]
-position = Vector2(23, 113)
-rotation = 1.5707964
-target_obstacle = NodePath("../Wall2")
-move_offset = Vector2(0, -50)
-
-[node name="Square" parent="." unique_id=350941581 instance=ExtResource("6_t0hvh")]
-position = Vector2(212, -120)
-
-[node name="Circle" parent="." unique_id=18589820 instance=ExtResource("7_kfebt")]
-position = Vector2(-110, 143)
-
-[node name="Triangle" parent="." unique_id=1272517777 instance=ExtResource("8_r72dd")]
-position = Vector2(364, 83)
-
-[node name="Pentagon" parent="." unique_id=833800454 instance=ExtResource("9_kfebt")]
-position = Vector2(248, -4)
+position = Vector2(-368, 0)
+metadata/_scene_painted = true

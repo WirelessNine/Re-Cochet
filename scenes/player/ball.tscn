@@ -34,6 +34,7 @@ texture = ExtResource("2_cladr")
 
 [node name="HitEffect" type="Sprite2D" parent="." unique_id=1583771800]
 unique_name_in_owner = true
+visible = false
 z_index = 1
 texture = ExtResource("4_cladr")
 

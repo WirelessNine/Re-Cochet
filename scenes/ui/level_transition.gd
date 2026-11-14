@@ -10,3 +10,7 @@ func play(old_level: int, new_level: int) -> void:
 	new_level_label.text = str(new_level)
 
 	animation_player.play(&"default")
+
+
+func _opened() -> void:
+	animation_player.play(&"RESET")
