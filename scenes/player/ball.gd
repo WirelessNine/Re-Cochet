@@ -1,6 +1,8 @@
 class_name Player2D
 extends CharacterBody2D
 
+signal obstacle_hit
+
 const SPEED: float = 800.0
 const MIN_DISTANCE_FOR_MAX: float = 100.0
 const DRAG_PREVIEW_POINT: int = 1
@@ -83,6 +85,7 @@ func _handle_reflection(last_velocity: Vector2) -> void:
 		if collider is Obstacle2D:
 			collider._touched()
 			_play_hit_effect()
+			obstacle_hit.emit()
 
 
 func _play_hit_effect() -> void:

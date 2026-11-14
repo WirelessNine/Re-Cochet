@@ -10,11 +10,13 @@
 script = ExtResource("1_uvc87")
 canvas_color = Color(0.90000004, 1, 0.76, 1)
 
-[node name="Ball" parent="." unique_id=765945013 instance=ExtResource("1_m802k")]
-
 [node name="Camera" type="Camera2D" parent="." unique_id=271012844]
+unique_name_in_owner = true
 zoom = Vector2(0.5, 0.5)
 process_callback = 0
+
+[node name="Ball" parent="." unique_id=765945013 instance=ExtResource("1_m802k")]
+unique_name_in_owner = true
 
 [node name="Wall" parent="." unique_id=251030527 instance=ExtResource("2_i2aat")]
 position = Vector2(-142, -9)

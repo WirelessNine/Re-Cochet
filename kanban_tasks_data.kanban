@@ -27,6 +27,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"6c78243d-e5fa-4375-b779-1921f05ec17d",
 				"b37ff2ac-8e0e-4458-8cdf-537539b60411",
 				"6101d1ed-b166-4499-9272-940ffc2ef5f0",
 				"b74ec736-f811-414d-94ff-bb9051c0f54a",
@@ -158,6 +159,13 @@
 		{
 			"uuid": "b37ff2ac-8e0e-4458-8cdf-537539b60411",
 			"title": "Add hit effect",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "6c78243d-e5fa-4375-b779-1921f05ec17d",
+			"title": "Add camera shake",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []
