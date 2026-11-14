@@ -16,6 +16,7 @@ var drag_distance: float
 var movement_started: bool = false
 
 @onready var drag_preview: Line2D = %DragPreview
+@onready var sprite: Sprite2D = %Sprite
 @onready var hit_effect: Sprite2D = %HitEffect
 
 
@@ -91,14 +92,15 @@ func _handle_reflection(last_velocity: Vector2) -> void:
 func _play_hit_effect() -> void:
 	hit_effect.scale = Vector2.ONE
 	hit_effect.modulate.a = 1.0
+	sprite.scale = Vector2.ONE * 0.5
 
 	var tween: Tween = create_tween()
 
 	tween.set_parallel(true)
 
 	tween.tween_property(hit_effect, ^"scale", Vector2.ONE * 3.0, 0.4)
-	tween.tween_interval(0.1)
 	tween.tween_property(hit_effect, ^"modulate:a", 0.0, 0.4)
+	tween.tween_property(sprite, ^"scale", Vector2.ONE, 0.2)
 
 
 func _on_area_body_entered(body: Node2D) -> void:

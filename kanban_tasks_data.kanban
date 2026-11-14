@@ -27,6 +27,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"fe855bcc-316a-4a11-aed3-be847c3b2f25",
 				"6aa2cb1d-8785-4e8e-9ddf-9a43be36bf59",
 				"6c78243d-e5fa-4375-b779-1921f05ec17d",
 				"b37ff2ac-8e0e-4458-8cdf-537539b60411",
@@ -174,6 +175,13 @@
 		{
 			"uuid": "6aa2cb1d-8785-4e8e-9ddf-9a43be36bf59",
 			"title": "Add level button effects",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "fe855bcc-316a-4a11-aed3-be847c3b2f25",
+			"title": "Add more effects",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []
