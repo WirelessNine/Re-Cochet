@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c4q0qrn1pxl6w" path="res://scenes/player/ball.gd" id="1_jxcsf"]
 [ext_resource type="Material" uid="uid://bipoqgphw5eb0" path="res://resources/materials/drop_shadow_material.tres" id="2_8x03u"]
 [ext_resource type="Texture2D" uid="uid://ex4hwa0lil6h" path="res://resources/textures/player/player.tres" id="2_cladr"]
+[ext_resource type="Texture2D" uid="uid://dopyqpbwisn6x" path="res://resources/textures/player/player_hit.tres" id="4_cladr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_as85p"]
 radius = 14.0
@@ -29,6 +30,11 @@ show_behind_parent = true
 z_index = -1
 material = ExtResource("2_8x03u")
 texture = ExtResource("2_cladr")
+
+[node name="HitEffect" type="Sprite2D" parent="." unique_id=1583771800]
+unique_name_in_owner = true
+z_index = 1
+texture = ExtResource("4_cladr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=270836035]
 shape = SubResource("CircleShape2D_as85p")

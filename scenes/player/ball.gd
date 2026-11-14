@@ -1,7 +1,7 @@
 class_name Player2D
 extends CharacterBody2D
 
-const SPEED: float = 600.0
+const SPEED: float = 800.0
 const MIN_DISTANCE_FOR_MAX: float = 100.0
 const DRAG_PREVIEW_POINT: int = 1
 
@@ -14,10 +14,12 @@ var drag_distance: float
 var movement_started: bool = false
 
 @onready var drag_preview: Line2D = %DragPreview
+@onready var hit_effect: Sprite2D = %HitEffect
 
 
 func _ready() -> void:
 	drag_preview.hide()
+	hit_effect.modulate.a = 0.0
 
 
 func _physics_process(_delta: float) -> void:
@@ -80,6 +82,20 @@ func _handle_reflection(last_velocity: Vector2) -> void:
 
 		if collider is Obstacle2D:
 			collider._touched()
+			_play_hit_effect()
+
+
+func _play_hit_effect() -> void:
+	hit_effect.scale = Vector2.ONE
+	hit_effect.modulate.a = 1.0
+
+	var tween: Tween = create_tween()
+
+	tween.set_parallel(true)
+
+	tween.tween_property(hit_effect, ^"scale", Vector2.ONE * 3.0, 0.4)
+	tween.tween_interval(0.1)
+	tween.tween_property(hit_effect, ^"modulate:a", 0.0, 0.4)
 
 
 func _on_area_body_entered(body: Node2D) -> void:

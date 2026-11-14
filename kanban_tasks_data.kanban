@@ -27,6 +27,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"b37ff2ac-8e0e-4458-8cdf-537539b60411",
 				"6101d1ed-b166-4499-9272-940ffc2ef5f0",
 				"b74ec736-f811-414d-94ff-bb9051c0f54a",
 				"6dbe6070-923d-42d4-bde1-d159937ec1f0",
@@ -150,6 +151,13 @@
 		{
 			"uuid": "6dbe6070-923d-42d4-bde1-d159937ec1f0",
 			"title": "Add wall hit pulse",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "b37ff2ac-8e0e-4458-8cdf-537539b60411",
+			"title": "Add hit effect",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []
