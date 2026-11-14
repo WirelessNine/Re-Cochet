@@ -29,6 +29,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"77d26f5d-707e-4743-8f0a-0cac296dd380",
 				"7b685b73-9756-4d5b-9db1-7b5792605608",
 				"5d6fb4c4-6e9e-499f-bbda-43294b434bc1",
 				"36875e0d-eff4-474e-b551-bf7b4c072663",
@@ -126,6 +127,13 @@
 		{
 			"uuid": "c1b50dc8-2aea-49c5-9d12-62d7a336b9ed",
 			"title": "Setup project settings",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "77d26f5d-707e-4743-8f0a-0cac296dd380",
+			"title": "Add levels",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []

@@ -34,3 +34,4 @@ points = PackedVector2Array(0, 0, 56, 33)
 width = 30.0
 width_curve = SubResource("Curve_as85p")
 gradient = SubResource("Gradient_syx3y")
+antialiased = true

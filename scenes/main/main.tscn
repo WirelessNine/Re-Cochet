@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://cek5oa18c8she"]
 
 [ext_resource type="Script" uid="uid://dob0r6vfipwon" path="res://scenes/main/main.gd" id="1_hyk8p"]
-[ext_resource type="PackedScene" uid="uid://c4f18m7owfw4d" path="res://scenes/levels/level_01.tscn" id="2_iuonh"]
 
 [node name="Main" type="Node" unique_id=257091059]
 script = ExtResource("1_hyk8p")
-
-[node name="Level01" parent="." unique_id=1967266403 instance=ExtResource("2_iuonh")]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1389913331]
