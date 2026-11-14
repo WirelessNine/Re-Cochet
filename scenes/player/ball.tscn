@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dhu4mu7mc1ft2"]
+
+[ext_resource type="Texture2D" uid="uid://d2cblomikvyg0" path="res://assets/spritesheets/main_spritesheet.svg" id="1_jxf6l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_as85p"]
+atlas = ExtResource("1_jxf6l")
+region = Rect2(0, 0, 64, 64)
+
+[node name="Ball" type="CharacterBody2D" unique_id=765945013]
+motion_mode = 1
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1977855075]
+texture = SubResource("AtlasTexture_as85p")
