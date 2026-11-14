@@ -1,8 +1,8 @@
 class_name Player2D
 extends CharacterBody2D
 
-const SPEED: float = 500.0
-const MIN_DISTANCE_FOR_MAX: float = 150.0
+const SPEED: float = 600.0
+const MIN_DISTANCE_FOR_MAX: float = 100.0
 const DRAG_PREVIEW_POINT: int = 1
 
 var drag_start_pos: Vector2
@@ -24,16 +24,11 @@ func _physics_process(_delta: float) -> void:
 	if not movement_started:
 		return
 
-	var speed_multiplier: float
-
-	if drag_distance >= MIN_DISTANCE_FOR_MAX:
-		speed_multiplier = 1.0
-	else:
-		speed_multiplier = remap(drag_distance, 1.0, MIN_DISTANCE_FOR_MAX, 0.1, 1.0)
-
-	velocity = drag_direction * (SPEED * speed_multiplier)
+	var current_velocity: Vector2 = velocity
 
 	move_and_slide()
+
+	_handle_reflection(current_velocity)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -53,6 +48,28 @@ func _unhandled_input(event: InputEvent) -> void:
 			movement_started = true
 			drag_preview.hide()
 
+			_set_directional_velocity()
+
 	if event is InputEventMouseMotion:
 		drag_current_pos = event.global_position
 		drag_preview.set_point_position(DRAG_PREVIEW_POINT, get_local_mouse_position())
+
+
+func _set_directional_velocity() -> void:
+	var speed_multiplier: float
+
+	if drag_distance >= MIN_DISTANCE_FOR_MAX:
+		speed_multiplier = 1.0
+	else:
+		speed_multiplier = remap(drag_distance, 1.0, MIN_DISTANCE_FOR_MAX, 0.1, 1.0)
+
+	velocity = drag_direction * (SPEED * speed_multiplier)
+
+
+func _handle_reflection(last_velocity: Vector2) -> void:
+	if not is_on_wall():
+		return
+
+	var normal: Vector2 = get_wall_normal()
+
+	velocity = last_velocity.bounce(normal)
