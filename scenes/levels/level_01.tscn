@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dhu4mu7mc1ft2" path="res://scenes/player/ball.tscn" id="1_m802k"]
 [ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="2_i2aat"]
+[ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="3_2djvx"]
 
 [node name="Level01" type="Node2D" unique_id=1967266403]
 
@@ -16,3 +17,7 @@ position = Vector2(-142, -9)
 [node name="Wall2" parent="." unique_id=1849547708 instance=ExtResource("2_i2aat")]
 position = Vector2(201, -70)
 rotation = -0.7853982
+
+[node name="WeakWall" parent="." unique_id=2105004682 instance=ExtResource("3_2djvx")]
+position = Vector2(14, -139)
+rotation = 1.5707964

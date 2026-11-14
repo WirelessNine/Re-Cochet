@@ -73,3 +73,10 @@ func _handle_reflection(last_velocity: Vector2) -> void:
 	var normal: Vector2 = get_wall_normal()
 
 	velocity = last_velocity.bounce(normal)
+
+	var collision: KinematicCollision2D = get_last_slide_collision()
+	if collision:
+		var collider: Object = collision.get_collider()
+
+		if collider is Obstacle2D:
+			collider._touched()
