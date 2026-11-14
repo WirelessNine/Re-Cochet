@@ -80,3 +80,8 @@ func _handle_reflection(last_velocity: Vector2) -> void:
 
 		if collider is Obstacle2D:
 			collider._touched()
+
+
+func _on_area_body_entered(body: Node2D) -> void:
+	if body is Obstacle2D:
+		body._touched()

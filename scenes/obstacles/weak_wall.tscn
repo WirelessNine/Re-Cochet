@@ -29,7 +29,7 @@ radial_velocity_min = -96.77002
 radial_velocity_max = 53.759975
 gravity = Vector3(0, 0, 0)
 scale_curve = SubResource("CurveTexture_syx3y")
-color = Color(1, 1, 1, 0.2784314)
+color = Color(1, 1, 1, 0.45882353)
 
 [node name="WeakWall" type="AnimatableBody2D" unique_id=2105004682]
 script = ExtResource("1_uhc7g")

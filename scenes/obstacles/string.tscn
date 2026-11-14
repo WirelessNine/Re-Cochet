@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bmm0nbe82ftka"]
+
+[ext_resource type="Script" uid="uid://bniexn1cch48y" path="res://scenes/obstacles/string.gd" id="1_2hhs6"]
+[ext_resource type="Texture2D" uid="uid://cjw3nexaf1vw0" path="res://resources/textures/obstacles/string.tres" id="2_k5ec0"]
+[ext_resource type="Material" uid="uid://bipoqgphw5eb0" path="res://resources/materials/drop_shadow_material.tres" id="3_2hhs6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_as85p"]
+size = Vector2(6, 192)
+
+[node name="String" type="AnimatableBody2D" unique_id=1139074267]
+z_index = -1
+collision_layer = 2
+script = ExtResource("1_2hhs6")
+metadata/_custom_type_script = "uid://dogfxl7fhdon2"
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1534297321]
+unique_name_in_owner = true
+texture = ExtResource("2_k5ec0")
+
+[node name="Shadow" type="Sprite2D" parent="Sprite" unique_id=537843980]
+unique_name_in_owner = true
+show_behind_parent = true
+material = ExtResource("3_2hhs6")
+texture = ExtResource("2_k5ec0")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="." unique_id=1813367373]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_as85p")
+debug_color = Color(0, 0.5950001, 0.7, 0)

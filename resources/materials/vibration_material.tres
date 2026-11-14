@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://del2uol8ofq3u"]
+
+[ext_resource type="Shader" uid="uid://wew2ccxpadq0" path="res://resources/materials/vibration.gdshader" id="1_opv6r"]
+
+[resource]
+shader = ExtResource("1_opv6r")
+shader_parameter/amplitude = 8.0
+shader_parameter/frequency = 1.0
+shader_parameter/speed = 45.0
+shader_parameter/damping = 0.0
+shader_parameter/pluck_time = 0.0

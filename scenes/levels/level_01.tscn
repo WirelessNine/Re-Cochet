@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scenes/levels/level_01.gd" id="1_uvc87"]
 [ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="2_i2aat"]
 [ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="3_2djvx"]
+[ext_resource type="PackedScene" uid="uid://bmm0nbe82ftka" path="res://scenes/obstacles/string.tscn" id="5_qdh5e"]
 
 [node name="Level01" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_uvc87")
@@ -24,3 +25,9 @@ rotation = -0.7853982
 [node name="WeakWall" parent="." unique_id=2105004682 instance=ExtResource("3_2djvx")]
 position = Vector2(14, -139)
 rotation = 1.5707964
+
+[node name="String" parent="." unique_id=1139074267 node_paths=PackedStringArray("target_obstacle") instance=ExtResource("5_qdh5e")]
+position = Vector2(23, 113)
+rotation = 1.5707964
+target_obstacle = NodePath("../Wall2")
+move_offset = Vector2(0, -50)
