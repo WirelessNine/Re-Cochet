@@ -27,6 +27,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"6aa2cb1d-8785-4e8e-9ddf-9a43be36bf59",
 				"6c78243d-e5fa-4375-b779-1921f05ec17d",
 				"b37ff2ac-8e0e-4458-8cdf-537539b60411",
 				"6101d1ed-b166-4499-9272-940ffc2ef5f0",
@@ -166,6 +167,13 @@
 		{
 			"uuid": "6c78243d-e5fa-4375-b779-1921f05ec17d",
 			"title": "Add camera shake",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "6aa2cb1d-8785-4e8e-9ddf-9a43be36bf59",
+			"title": "Add level button effects",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []

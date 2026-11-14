@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TweenPreset" format=3 uid="uid://dhurfiw66vqxb"]
+
+[ext_resource type="Script" uid="uid://cdo6h5x4glwop" path="res://addons/ui_expansion/objects/tween/tween_preset.gd" id="1_rfps8"]
+[ext_resource type="Script" uid="uid://ddiy46s8pndwo" path="res://addons/ui_expansion/objects/tween/tween_step.gd" id="2_w2yty"]
+
+[sub_resource type="Resource" id="Resource_rfps8"]
+resource_name = "Scale 0.20s"
+script = ExtResource("2_w2yty")
+transition = 7
+duration = 0.2
+tween_property = 2
+start_value = Vector2(1, 1)
+end_value = Vector2(0.9, 0.9)
+metadata/_custom_type_script = "uid://ddiy46s8pndwo"
+
+[resource]
+script = ExtResource("1_rfps8")
+steps = Array[ExtResource("2_w2yty")]([SubResource("Resource_rfps8")])
+metadata/_custom_type_script = "uid://cdo6h5x4glwop"
