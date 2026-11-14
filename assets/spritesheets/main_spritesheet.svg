@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2"
-     inkscape:cx="456"
-     inkscape:cy="175.25"
+     inkscape:zoom="4"
+     inkscape:cx="692"
+     inkscape:cy="39.875"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -187,5 +187,14 @@
        d="m 120.13215,51.108166 -29.602463,0 14.801233,-25.636482 z"
        inkscape:transform-center-y="-2.7178468"
        transform="matrix(0.53319705,0,0,0.6360887,53.922703,17.973484)" />
+    <rect
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1.5875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3.17499, 3.17499;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect39"
+       width="14.544575"
+       height="14.43432"
+       x="170.12714"
+       y="0.79368824"
+       rx="7.2735338"
+       ry="7.2171602" />
   </g>
 </svg>

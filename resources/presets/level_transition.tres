@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="TweenPreset" format=3 uid="uid://csbhmw3ip0q5v"]
+
+[ext_resource type="Script" uid="uid://cdo6h5x4glwop" path="res://addons/ui_expansion/objects/tween/tween_preset.gd" id="1_74qk1"]
+[ext_resource type="Script" uid="uid://ddiy46s8pndwo" path="res://addons/ui_expansion/objects/tween/tween_step.gd" id="2_tfqun"]
+
+[sub_resource type="Resource" id="Resource_p6ljb"]
+resource_name = "Ratio 0.50s"
+script = ExtResource("2_tfqun")
+transition = 7
+tween_property = 1
+start_value = Vector2(0, -1)
+end_value = Vector2(0, 0)
+metadata/_custom_type_script = "uid://ddiy46s8pndwo"
+
+[resource]
+script = ExtResource("1_74qk1")
+steps = Array[ExtResource("2_tfqun")]([SubResource("Resource_p6ljb")])
+show_on_start = true
+hide_on_finish = true
+metadata/_custom_type_script = "uid://cdo6h5x4glwop"

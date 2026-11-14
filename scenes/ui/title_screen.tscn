@@ -17,7 +17,7 @@ move_background = false
 close_hud = false
 metadata/_custom_type_script = "uid://rxwty6cd03ab"
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1998064095]
+[node name="Pattern" type="TextureRect" parent="." unique_id=1998064095]
 modulate = Color(0.77, 0.9156667, 1, 1)
 layout_mode = 2
 texture = ExtResource("2_aqpy5")

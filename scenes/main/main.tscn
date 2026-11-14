@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dob0r6vfipwon" path="res://scenes/main/main.gd" id="1_hyk8p"]
 [ext_resource type="PackedScene" uid="uid://cne11b6o4xcdl" path="res://scenes/ui/title_screen.tscn" id="2_iuonh"]
+[ext_resource type="PackedScene" uid="uid://cpey7p5dp4tr1" path="res://scenes/ui/level_transition.tscn" id="3_k2fmo"]
 
 [node name="Main" type="Node" unique_id=257091059]
 script = ExtResource("1_hyk8p")
@@ -21,3 +22,6 @@ color = Color(0, 0, 0, 1)
 
 [node name="TitleScreen" parent="UI" unique_id=2008179970 instance=ExtResource("2_iuonh")]
 unique_name_in_owner = true
+
+[node name="LevelTransition" parent="UI" unique_id=128309869 instance=ExtResource("3_k2fmo")]
+visible = false

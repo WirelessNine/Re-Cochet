@@ -1,6 +1,8 @@
 class_name Player2D
 extends CharacterBody2D
 
+const RETURN_POINT: PackedScene = preload("uid://cfaar6j0h3o0c")
+
 signal obstacle_hit
 
 const SPEED: float = 800.0
@@ -14,6 +16,12 @@ var drag_direction: Vector2
 var drag_distance: float
 
 var movement_started: bool = false
+var movement_disabled: bool = false
+
+var start_position: Vector2
+var return_point_created: bool
+
+var hit_effect_tween: Tween
 
 @onready var drag_preview: Line2D = %DragPreview
 @onready var sprite: Sprite2D = %Sprite
@@ -26,8 +34,18 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	if not movement_started:
+	if not movement_started or movement_disabled:
 		return
+
+	if not return_point_created:
+		if global_position.distance_to(start_position) > 150:
+			return_point_created = true
+
+			var return_point: Area2D = RETURN_POINT.instantiate()
+
+			get_parent().add_child(return_point)
+
+			return_point.global_position = start_position
 
 	var current_velocity: Vector2 = velocity
 
@@ -50,6 +68,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			drag_direction = drag_current_pos.direction_to(drag_start_pos)
 			drag_distance = drag_current_pos.distance_to(drag_start_pos)
+			start_position = global_position
 			movement_started = true
 			drag_preview.hide()
 
@@ -80,6 +99,7 @@ func _handle_reflection(last_velocity: Vector2) -> void:
 	velocity = last_velocity.bounce(normal)
 
 	var collision: KinematicCollision2D = get_last_slide_collision()
+
 	if collision:
 		var collider: Object = collision.get_collider()
 
@@ -94,13 +114,16 @@ func _play_hit_effect() -> void:
 	hit_effect.modulate.a = 1.0
 	sprite.scale = Vector2.ONE * 0.5
 
-	var tween: Tween = create_tween()
+	if is_instance_valid(hit_effect_tween):
+		hit_effect_tween.kill()
 
-	tween.set_parallel(true)
+	hit_effect_tween = create_tween()
 
-	tween.tween_property(hit_effect, ^"scale", Vector2.ONE * 3.0, 0.4)
-	tween.tween_property(hit_effect, ^"modulate:a", 0.0, 0.4)
-	tween.tween_property(sprite, ^"scale", Vector2.ONE, 0.2)
+	hit_effect_tween.set_parallel(true)
+
+	hit_effect_tween.tween_property(hit_effect, ^"scale", Vector2.ONE * 2.0, 0.2)
+	hit_effect_tween.tween_property(hit_effect, ^"modulate:a", 0.0, 0.15)
+	hit_effect_tween.tween_property(sprite, ^"scale", Vector2.ONE, 0.2)
 
 
 func _on_area_body_entered(body: Node2D) -> void:

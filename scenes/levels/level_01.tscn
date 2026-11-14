@@ -11,7 +11,7 @@
 
 [node name="Level01" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_uvc87")
-canvas_color = Color(0.90000004, 1, 0.76, 1)
+canvas_color = Color(0.47058824, 0.84705883, 0.7176471, 1)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=271012844]
 unique_name_in_owner = true
@@ -23,6 +23,9 @@ unique_name_in_owner = true
 
 [node name="Wall" parent="." unique_id=251030527 instance=ExtResource("2_i2aat")]
 position = Vector2(-142, -9)
+
+[node name="Wall3" parent="." unique_id=2119743309 instance=ExtResource("2_i2aat")]
+position = Vector2(293, -13)
 
 [node name="Wall2" parent="." unique_id=1849547708 instance=ExtResource("2_i2aat")]
 position = Vector2(335.00003, 185)
@@ -45,4 +48,4 @@ position = Vector2(212, -120)
 position = Vector2(-110, 143)
 
 [node name="Triangle" parent="." unique_id=1272517777 instance=ExtResource("8_r72dd")]
-position = Vector2(278, 39)
+position = Vector2(364, 83)
