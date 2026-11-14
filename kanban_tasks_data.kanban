@@ -10,7 +10,19 @@
 		{
 			"uuid": "4df57c2e-57da-42bd-98ab-a92941f5f463",
 			"title": "Todo",
-			"tasks": []
+			"tasks": [
+				"20b1e446-953d-4b63-927d-02cabdbafcab",
+				"5d6fb4c4-6e9e-499f-bbda-43294b434bc1",
+				"36875e0d-eff4-474e-b551-bf7b4c072663",
+				"984ed803-c108-470c-9827-7d660c873894",
+				"7b685b73-9756-4d5b-9db1-7b5792605608",
+				"b74ec736-f811-414d-94ff-bb9051c0f54a",
+				"96fe7c89-0848-4b08-9a26-d796a7021d03",
+				"bc7023d4-9fc7-4c99-9df4-183079703b16",
+				"a3013ec8-c374-41d7-b64b-28aba09d9969",
+				"44317aa4-ef18-4d75-b461-ed2508df905a",
+				"117589e0-d104-4321-ac94-e24a4a394d72"
+			]
 		},
 		{
 			"uuid": "828bb566-867f-4d66-a165-dec5c7fbb0fa",
@@ -20,10 +32,97 @@
 		{
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
-			"tasks": []
+			"tasks": [
+				"3f28a796-b7e2-4709-81be-0b64241601a0"
+			]
 		}
 	],
-	"tasks": [],
+	"tasks": [
+		{
+			"uuid": "3f28a796-b7e2-4709-81be-0b64241601a0",
+			"title": "Create main scene",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "20b1e446-953d-4b63-927d-02cabdbafcab",
+			"title": "Create player ball scene",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "5d6fb4c4-6e9e-499f-bbda-43294b434bc1",
+			"title": "Add wall obstacle",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "36875e0d-eff4-474e-b551-bf7b4c072663",
+			"title": "Add ball push dragging",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "984ed803-c108-470c-9827-7d660c873894",
+			"title": "Add ball ricocheting",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "7b685b73-9756-4d5b-9db1-7b5792605608",
+			"title": "Add weak wall",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "b74ec736-f811-414d-94ff-bb9051c0f54a",
+			"title": "Add string wall",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "96fe7c89-0848-4b08-9a26-d796a7021d03",
+			"title": "Add triangle and circle wall",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "bc7023d4-9fc7-4c99-9df4-183079703b16",
+			"title": "Add speed wall",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "a3013ec8-c374-41d7-b64b-28aba09d9969",
+			"title": "Add drag visualizer and trail",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "44317aa4-ef18-4d75-b461-ed2508df905a",
+			"title": "Add optional collectible",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "117589e0-d104-4321-ac94-e24a4a394d72",
+			"title": "Add level select menu",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		}
+	],
 	"layout": {
 		"columns": [
 			[
