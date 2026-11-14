@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://dhu4mu7mc1ft2"]
 
 [ext_resource type="Script" uid="uid://c4q0qrn1pxl6w" path="res://scenes/player/ball.gd" id="1_jxcsf"]
-[ext_resource type="Texture2D" uid="uid://d2cblomikvyg0" path="res://assets/spritesheets/main_spritesheet.svg" id="1_jxf6l"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_as85p"]
-atlas = ExtResource("1_jxf6l")
-region = Rect2(0, 0, 32, 32)
+[ext_resource type="Material" uid="uid://bipoqgphw5eb0" path="res://resources/materials/drop_shadow_material.tres" id="2_8x03u"]
+[ext_resource type="Texture2D" uid="uid://ex4hwa0lil6h" path="res://resources/textures/player/player.tres" id="2_cladr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_as85p"]
 radius = 14.0
@@ -22,10 +19,17 @@ motion_mode = 1
 script = ExtResource("1_jxcsf")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1977855075]
-texture = SubResource("AtlasTexture_as85p")
+texture = ExtResource("2_cladr")
+
+[node name="Shadow" type="Sprite2D" parent="Sprite" unique_id=1835853963]
+show_behind_parent = true
+z_index = -1
+material = ExtResource("2_8x03u")
+texture = ExtResource("2_cladr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=270836035]
 shape = SubResource("CircleShape2D_as85p")
+debug_color = Color(0, 0.5950001, 0.7, 0)
 
 [node name="DragPreview" type="Line2D" parent="." unique_id=2098833734]
 unique_name_in_owner = true

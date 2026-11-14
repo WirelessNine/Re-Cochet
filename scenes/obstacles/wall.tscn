@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ipnpybmkm30b"]
 
+[ext_resource type="Material" uid="uid://bipoqgphw5eb0" path="res://resources/materials/drop_shadow_material.tres" id="1_amwi0"]
 [ext_resource type="Texture2D" uid="uid://baamtv6ta751g" path="res://resources/textures/obstacles/wall.tres" id="1_fdlmw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_as85p"]
@@ -7,8 +8,14 @@ size = Vector2(16, 128)
 
 [node name="Wall" type="AnimatableBody2D" unique_id=251030527]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1646869088]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1646869088]
+texture = ExtResource("1_fdlmw")
+
+[node name="Shadow" type="Sprite2D" parent="Sprite" unique_id=286633606]
+show_behind_parent = true
+material = ExtResource("1_amwi0")
 texture = ExtResource("1_fdlmw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2086472865]
 shape = SubResource("RectangleShape2D_as85p")
+debug_color = Color(0, 0.5950001, 0.7, 0)
