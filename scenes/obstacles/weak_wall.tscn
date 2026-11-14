@@ -5,31 +5,10 @@
 [ext_resource type="Material" uid="uid://bipoqgphw5eb0" path="res://resources/materials/drop_shadow_material.tres" id="3_0tjvu"]
 [ext_resource type="Texture2D" uid="uid://cyujrjm2clq8x" path="res://assets/particles/dust.png" id="3_hwrpx"]
 [ext_resource type="Texture2D" uid="uid://baamtv6ta751g" path="res://resources/textures/obstacles/wall.tres" id="4_ta044"]
+[ext_resource type="Material" uid="uid://c0mtr7tqnxlx7" path="res://resources/particles/weak_wall_particles.tres" id="6_ta044"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_as85p"]
 size = Vector2(16, 128)
-
-[sub_resource type="Curve" id="Curve_3na71"]
-_data = [Vector2(0, 0.6), 0.0, 0.0, 0, 0, Vector2(0.2, 0.6), 0.0, 0.0, 0, 0, Vector2(0.972973, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_syx3y"]
-curve = SubResource("Curve_3na71")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_as85p"]
-particle_flag_disable_z = true
-emission_shape_scale = Vector3(8, 64, 1)
-emission_shape = 3
-emission_box_extents = Vector3(1, 1, 1)
-spread = 180.0
-initial_velocity_max = 129.03
-angular_velocity_min = -363.87
-angular_velocity_max = 92.89998
-radial_velocity_min = -96.77002
-radial_velocity_max = 53.759975
-gravity = Vector3(0, 0, 0)
-scale_curve = SubResource("CurveTexture_syx3y")
-color = Color(1, 1, 1, 0.45882353)
 
 [node name="WeakWall" type="AnimatableBody2D" unique_id=2105004682]
 script = ExtResource("1_uhc7g")
@@ -57,4 +36,4 @@ texture = ExtResource("3_hwrpx")
 lifetime = 0.5
 one_shot = true
 explosiveness = 1.0
-process_material = SubResource("ParticleProcessMaterial_as85p")
+process_material = ExtResource("6_ta044")

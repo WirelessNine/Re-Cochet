@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://mw65nsdbrqfg" path="res://scenes/obstacles/return_point.gd" id="1_o8063"]
 [ext_resource type="Texture2D" uid="uid://jn8ij4e0kil5" path="res://resources/textures/player/circle.tres" id="1_w0tf6"]
+[ext_resource type="Material" uid="uid://dhhjef3jyrtoy" path="res://resources/particles/return_point_particles.tres" id="3_ew0f5"]
 
 [sub_resource type="Animation" id="Animation_o8063"]
 length = 0.001
@@ -43,37 +44,6 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_as85p"]
 radius = 29.732138
 
-[sub_resource type="Curve" id="Curve_xw6je"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.7350994, 0), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_ewadd"]
-curve = SubResource("Curve_xw6je")
-
-[sub_resource type="Curve" id="Curve_w0tf6"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.986755, 0), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_syx3y"]
-curve = SubResource("Curve_w0tf6")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_as85p"]
-particle_flag_disable_z = true
-emission_shape = 1
-emission_sphere_radius = 70.95
-angular_velocity_min = -510.48
-angular_velocity_max = 243.80998
-orbit_velocity_min = 9.49949e-08
-orbit_velocity_max = 0.4870001
-radial_velocity_min = -45.000023
-radial_velocity_max = -35.000023
-gravity = Vector3(0, 0, 0)
-scale_min = 7.0
-scale_max = 9.0
-scale_curve = SubResource("CurveTexture_syx3y")
-color = Color(1, 1, 1, 0.52156866)
-alpha_curve = SubResource("CurveTexture_ewadd")
-
 [node name="ReturnPoint" type="Area2D" unique_id=1532338156]
 script = ExtResource("1_o8063")
 
@@ -93,6 +63,6 @@ shape = SubResource("CircleShape2D_as85p")
 unique_name_in_owner = true
 emitting = false
 amount = 32
-process_material = SubResource("ParticleProcessMaterial_as85p")
+process_material = ExtResource("3_ew0f5")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

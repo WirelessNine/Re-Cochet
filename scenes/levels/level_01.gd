@@ -4,6 +4,7 @@ extends Node2D
 const SHAKE_FADE: float = 10.0
 
 var _shake_strength: float = 0.0
+var pentagon_collected: bool = false
 
 @export var level_id: int = 0
 @export var canvas_color: Color
@@ -16,6 +17,7 @@ var _shake_strength: float = 0.0
 func _ready() -> void:
 	ball.obstacle_hit.connect(_on_obstacle_hit)
 
+	Globals.pentagon_collected.connect(set.bind(&"pentagon_collected", true))
 	Globals.level_completed.connect(_on_level_complete)
 
 
@@ -39,6 +41,9 @@ func _on_obstacle_hit() -> void:
 func _on_level_complete() -> void:
 	ball.movement_disabled = true
 	Globals.completed_levels[level_id] = true
+
+	if pentagon_collected:
+		Globals.pentagon_levels[level_id] = true
 
 	var tween: Tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 

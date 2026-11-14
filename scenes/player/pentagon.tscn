@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://d7puovc8g6ot"]
+
+[ext_resource type="Script" uid="uid://51swrq5p36s8" path="res://scenes/player/pentagon.gd" id="1_7pjyk"]
+[ext_resource type="Texture2D" uid="uid://cltq8udap8obq" path="res://resources/textures/player/pentagon.tres" id="1_8ebbx"]
+[ext_resource type="Material" uid="uid://cqhauob2kf7e4" path="res://resources/particles/pentagon_particles.tres" id="3_w6u0c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_as85p"]
+size = Vector2(36, 34)
+
+[sub_resource type="Animation" id="Animation_7pjyk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_w6u0c"]
+resource_name = "spin"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_voa21"]
+_data = {
+&"RESET": SubResource("Animation_7pjyk"),
+&"spin": SubResource("Animation_w6u0c")
+}
+
+[node name="Pentagon" type="Area2D" unique_id=833800454]
+script = ExtResource("1_7pjyk")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=937247558]
+unique_name_in_owner = true
+texture = ExtResource("1_8ebbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1545393866]
+shape = SubResource("RectangleShape2D_as85p")
+debug_color = Color(0, 0.5950001, 0.7, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=381427455]
+libraries/ = SubResource("AnimationLibrary_voa21")
+autoplay = &"spin"
+speed_scale = 0.5
+
+[node name="Particles" type="GPUParticles2D" parent="." unique_id=1245129320]
+unique_name_in_owner = true
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 1.0
+process_material = ExtResource("3_w6u0c")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

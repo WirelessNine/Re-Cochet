@@ -1,5 +1,7 @@
 extends Menu
 
+const PENTAGON_FULL: AtlasTexture = preload("uid://c7febubhoht5n")
+
 @onready var levels_grid: GridContainer = %LevelsGrid
 
 
@@ -18,3 +20,6 @@ func _opened() -> void:
 
 		if Globals.completed_levels[index]:
 			x.theme_type_variation = &"button_complete"
+
+		if Globals.pentagon_levels[index]:
+			x.pentagon_rect.texture = PENTAGON_FULL

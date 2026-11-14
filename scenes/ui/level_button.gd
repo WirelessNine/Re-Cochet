@@ -7,7 +7,8 @@ const BUTTON_PRESSED: TweenPreset = preload("uid://dhurfiw66vqxb")
 @export var level: PackedScene
 @export var level_name: String = "Level 1"
 
-@onready var name_label: Label = $MarginContainer/Name
+@onready var name_label: Label = %Name
+@onready var pentagon_rect: TextureRect = %Pentagon
 
 
 func _ready() -> void:

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cc4rnfjdx76ny" path="res://scenes/obstacles/square.tscn" id="6_t0hvh"]
 [ext_resource type="PackedScene" uid="uid://cxtyusewlaaa3" path="res://scenes/obstacles/circle.tscn" id="7_kfebt"]
 [ext_resource type="PackedScene" uid="uid://cg46m5aphtvcl" path="res://scenes/obstacles/triangle.tscn" id="8_r72dd"]
+[ext_resource type="PackedScene" uid="uid://d7puovc8g6ot" path="res://scenes/player/pentagon.tscn" id="9_kfebt"]
 
 [node name="Level01" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_uvc87")
@@ -49,3 +50,6 @@ position = Vector2(-110, 143)
 
 [node name="Triangle" parent="." unique_id=1272517777 instance=ExtResource("8_r72dd")]
 position = Vector2(364, 83)
+
+[node name="Pentagon" parent="." unique_id=833800454 instance=ExtResource("9_kfebt")]
+position = Vector2(248, -4)
