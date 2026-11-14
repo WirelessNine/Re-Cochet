@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cc4rnfjdx76ny"]
+
+[ext_resource type="Script" uid="uid://dpk2rfjrudpty" path="res://scenes/obstacles/wall.gd" id="1_iifny"]
+[ext_resource type="Texture2D" uid="uid://cfkbmuqwo5pt4" path="res://resources/textures/obstacles/square.tres" id="2_7s7k8"]
+[ext_resource type="Material" uid="uid://bipoqgphw5eb0" path="res://resources/materials/drop_shadow_material.tres" id="3_e4qlr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_as85p"]
+size = Vector2(64, 64)
+
+[node name="Square" type="AnimatableBody2D" unique_id=350941581]
+script = ExtResource("1_iifny")
+metadata/_custom_type_script = "uid://dogfxl7fhdon2"
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=763296342]
+unique_name_in_owner = true
+texture = ExtResource("2_7s7k8")
+
+[node name="Shadow" type="Sprite2D" parent="Sprite" unique_id=345097885]
+show_behind_parent = true
+material = ExtResource("3_e4qlr")
+texture = ExtResource("2_7s7k8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1189307780]
+shape = SubResource("RectangleShape2D_as85p")

@@ -11,11 +11,9 @@
 			"uuid": "4df57c2e-57da-42bd-98ab-a92941f5f463",
 			"title": "Todo",
 			"tasks": [
-				"96fe7c89-0848-4b08-9a26-d796a7021d03",
 				"bc7023d4-9fc7-4c99-9df4-183079703b16",
 				"a3013ec8-c374-41d7-b64b-28aba09d9969",
-				"44317aa4-ef18-4d75-b461-ed2508df905a",
-				"117589e0-d104-4321-ac94-e24a4a394d72"
+				"44317aa4-ef18-4d75-b461-ed2508df905a"
 			]
 		},
 		{
@@ -27,6 +25,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"96fe7c89-0848-4b08-9a26-d796a7021d03",
 				"fe855bcc-316a-4a11-aed3-be847c3b2f25",
 				"6aa2cb1d-8785-4e8e-9ddf-9a43be36bf59",
 				"6c78243d-e5fa-4375-b779-1921f05ec17d",
@@ -90,7 +89,7 @@
 		},
 		{
 			"uuid": "96fe7c89-0848-4b08-9a26-d796a7021d03",
-			"title": "Add triangle and circle wall",
+			"title": "Add shape walls",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []
@@ -112,13 +111,6 @@
 		{
 			"uuid": "44317aa4-ef18-4d75-b461-ed2508df905a",
 			"title": "Add optional collectible",
-			"description": "",
-			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
-			"steps": []
-		},
-		{
-			"uuid": "117589e0-d104-4321-ac94-e24a4a394d72",
-			"title": "Add level select menu",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []

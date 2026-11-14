@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="2_i2aat"]
 [ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="3_2djvx"]
 [ext_resource type="PackedScene" uid="uid://bmm0nbe82ftka" path="res://scenes/obstacles/string.tscn" id="5_qdh5e"]
+[ext_resource type="PackedScene" uid="uid://cc4rnfjdx76ny" path="res://scenes/obstacles/square.tscn" id="6_t0hvh"]
+[ext_resource type="PackedScene" uid="uid://cxtyusewlaaa3" path="res://scenes/obstacles/circle.tscn" id="7_kfebt"]
+[ext_resource type="PackedScene" uid="uid://cg46m5aphtvcl" path="res://scenes/obstacles/triangle.tscn" id="8_r72dd"]
 
 [node name="Level01" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_uvc87")
@@ -22,7 +25,7 @@ unique_name_in_owner = true
 position = Vector2(-142, -9)
 
 [node name="Wall2" parent="." unique_id=1849547708 instance=ExtResource("2_i2aat")]
-position = Vector2(201, -70)
+position = Vector2(335.00003, 185)
 rotation = -0.7853982
 
 [node name="WeakWall" parent="." unique_id=2105004682 instance=ExtResource("3_2djvx")]
@@ -34,3 +37,12 @@ position = Vector2(23, 113)
 rotation = 1.5707964
 target_obstacle = NodePath("../Wall2")
 move_offset = Vector2(0, -50)
+
+[node name="Square" parent="." unique_id=350941581 instance=ExtResource("6_t0hvh")]
+position = Vector2(212, -120)
+
+[node name="Circle" parent="." unique_id=18589820 instance=ExtResource("7_kfebt")]
+position = Vector2(-110, 143)
+
+[node name="Triangle" parent="." unique_id=1272517777 instance=ExtResource("8_r72dd")]
+position = Vector2(278, 39)

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cg46m5aphtvcl"]
+
+[ext_resource type="Script" uid="uid://dpk2rfjrudpty" path="res://scenes/obstacles/wall.gd" id="1_34uyr"]
+[ext_resource type="Texture2D" uid="uid://dug58ga606054" path="res://resources/textures/obstacles/triangle.tres" id="2_34uyr"]
+[ext_resource type="Material" uid="uid://bipoqgphw5eb0" path="res://resources/materials/drop_shadow_material.tres" id="3_ajhgl"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ivjmd"]
+points = PackedVector2Array(0, -32, -31, 32, 31, 32)
+
+[node name="Triangle" type="AnimatableBody2D" unique_id=350941581]
+script = ExtResource("1_34uyr")
+metadata/_custom_type_script = "uid://dogfxl7fhdon2"
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=763296342]
+unique_name_in_owner = true
+texture = ExtResource("2_34uyr")
+
+[node name="Shadow" type="Sprite2D" parent="Sprite" unique_id=1065029512]
+show_behind_parent = true
+material = ExtResource("3_ajhgl")
+texture = ExtResource("2_34uyr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1189307780]
+shape = SubResource("ConvexPolygonShape2D_ivjmd")
