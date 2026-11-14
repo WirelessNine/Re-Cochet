@@ -1,13 +1,36 @@
 [gd_scene format=3 uid="uid://dhu4mu7mc1ft2"]
 
+[ext_resource type="Script" uid="uid://c4q0qrn1pxl6w" path="res://scenes/player/ball.gd" id="1_jxcsf"]
 [ext_resource type="Texture2D" uid="uid://d2cblomikvyg0" path="res://assets/spritesheets/main_spritesheet.svg" id="1_jxf6l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_as85p"]
 atlas = ExtResource("1_jxf6l")
-region = Rect2(0, 0, 64, 64)
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_as85p"]
+radius = 14.0
+
+[sub_resource type="Curve" id="Curve_as85p"]
+_data = [Vector2(0.019999996, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_syx3y"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="Ball" type="CharacterBody2D" unique_id=765945013]
 motion_mode = 1
+script = ExtResource("1_jxcsf")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1977855075]
 texture = SubResource("AtlasTexture_as85p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=270836035]
+shape = SubResource("CircleShape2D_as85p")
+
+[node name="DragPreview" type="Line2D" parent="." unique_id=2098833734]
+unique_name_in_owner = true
+show_behind_parent = true
+points = PackedVector2Array(0, 0, 56, 33)
+width = 30.0
+width_curve = SubResource("Curve_as85p")
+gradient = SubResource("Gradient_syx3y")
