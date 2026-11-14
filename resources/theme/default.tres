@@ -1,0 +1,28 @@
+[gd_resource type="Theme" format=3 uid="uid://cviy8s56cctpg"]
+
+[ext_resource type="StyleBox" uid="uid://cfxx1yswh8xa5" path="res://resources/theme/styleboxes/button_hover.tres" id="1_4c6kv"]
+[ext_resource type="FontFile" uid="uid://va0t1i7vxj83" path="res://assets/fonts/ChangaOne-Regular.ttf" id="1_6lvnq"]
+[ext_resource type="StyleBox" uid="uid://d37q06hjqwfal" path="res://resources/theme/styleboxes/button_normal.tres" id="2_dmh5w"]
+[ext_resource type="StyleBox" uid="uid://bwhyc6k57ob4r" path="res://resources/theme/styleboxes/button_complete.tres" id="3_dmh5w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b3mt3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_as85p"]
+bg_color = Color(0.81, 0.9303334, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_voly0"]
+
+[resource]
+default_font = ExtResource("1_6lvnq")
+Button/styles/focus = SubResource("StyleBoxEmpty_b3mt3")
+Button/styles/hover = ExtResource("1_4c6kv")
+Button/styles/normal = ExtResource("2_dmh5w")
+Button/styles/pressed = ExtResource("1_4c6kv")
+Label/colors/font_color = Color(0, 0, 0, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_as85p")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+button_complete/base_type = &"Button"
+button_complete/styles/focus = SubResource("StyleBoxEmpty_voly0")
+button_complete/styles/hover = ExtResource("3_dmh5w")
+button_complete/styles/normal = ExtResource("3_dmh5w")
+button_complete/styles/pressed = ExtResource("3_dmh5w")

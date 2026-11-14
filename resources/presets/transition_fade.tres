@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TweenPreset" format=3 uid="uid://e8fpp0a1aur6"]
+
+[ext_resource type="Script" uid="uid://cdo6h5x4glwop" path="res://addons/ui_expansion/objects/tween/tween_preset.gd" id="1_lbbwx"]
+[ext_resource type="Script" uid="uid://ddiy46s8pndwo" path="res://addons/ui_expansion/objects/tween/tween_step.gd" id="2_miewu"]
+
+[sub_resource type="Resource" id="Resource_26qac"]
+resource_name = "Alpha 0.20s"
+script = ExtResource("2_miewu")
+duration = 0.2
+tween_property = 5
+snap = true
+start_value = 0.0
+end_value = 1.0
+metadata/_custom_type_script = "uid://ddiy46s8pndwo"
+
+[resource]
+script = ExtResource("1_lbbwx")
+steps = Array[ExtResource("2_miewu")]([SubResource("Resource_26qac")])
+show_on_start = true
+hide_on_finish = true
+metadata/_custom_type_script = "uid://cdo6h5x4glwop"

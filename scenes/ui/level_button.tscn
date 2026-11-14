@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cf7bdm0yyjqnq"]
+
+[ext_resource type="Script" uid="uid://dpg5sw6jlo6hw" path="res://scenes/ui/level_button.gd" id="1_0pgek"]
+[ext_resource type="Texture2D" uid="uid://c8prrn6cr3eat" path="res://resources/textures/ui/star_empty.tres" id="2_0pgek"]
+
+[node name="LevelButton" type="Button" unique_id=576126598]
+custom_minimum_size = Vector2(110, 60)
+offset_right = 107.0
+offset_bottom = 60.0
+script = ExtResource("1_0pgek")
+level_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=579564603]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Name" type="Label" parent="MarginContainer" unique_id=127616378]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Level 1"
+horizontal_alignment = 1
+
+[node name="Star" type="TextureRect" parent="MarginContainer" unique_id=883374455]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -4)
+texture = ExtResource("2_0pgek")
+expand_mode = 1
