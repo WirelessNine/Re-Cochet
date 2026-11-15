@@ -11,6 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://cgykd6c87bild" path="res://scenes/levels/level_06.tscn" id="9_jsbfx"]
 [ext_resource type="PackedScene" uid="uid://dlykvdbaraxgy" path="res://scenes/levels/level_07.tscn" id="10_7oraf"]
 [ext_resource type="PackedScene" uid="uid://cjgwfwlyplh2r" path="res://scenes/levels/level_08.tscn" id="11_lddph"]
+[ext_resource type="Material" uid="uid://duhvkg2oym0pm" path="res://resources/particles/shatter_particles.tres" id="12_tqags"]
+[ext_resource type="Material" uid="uid://cqhauob2kf7e4" path="res://resources/particles/pentagon_particles.tres" id="13_to824"]
+[ext_resource type="Material" uid="uid://c0mtr7tqnxlx7" path="res://resources/particles/weak_wall_particles.tres" id="14_y77df"]
+[ext_resource type="Material" uid="uid://dhhjef3jyrtoy" path="res://resources/particles/return_point_particles.tres" id="15_jqmgk"]
 
 [node name="TitleScreen" type="PanelContainer" unique_id=2008179970]
 anchors_preset = 15
@@ -99,3 +103,19 @@ layout_mode = 2
 size_flags_vertical = 8
 text = "WirelessNine"
 horizontal_alignment = 1
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=748635517]
+position = Vector2(-293, 119)
+process_material = ExtResource("12_tqags")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="." unique_id=948617857]
+position = Vector2(-509, 133)
+process_material = ExtResource("13_to824")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="." unique_id=1611816157]
+position = Vector2(-504, 316)
+process_material = ExtResource("14_y77df")
+
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="." unique_id=476657381]
+position = Vector2(-272, 289)
+process_material = ExtResource("15_jqmgk")

@@ -11,10 +11,7 @@
 			"uuid": "4df57c2e-57da-42bd-98ab-a92941f5f463",
 			"title": "Todo",
 			"tasks": [
-				"cff94f93-1bad-4d51-ab22-8d3fa99391ea",
-				"b55cbba3-68ca-4c69-a954-f33807aa72ec",
-				"4ac2cc8e-cfb7-4786-90d2-fa1d9a61010d",
-				"78ecab1d-136d-4ff2-81f8-cb1b7ab26a32"
+				"b55cbba3-68ca-4c69-a954-f33807aa72ec"
 			]
 		},
 		{
@@ -26,6 +23,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"4ac2cc8e-cfb7-4786-90d2-fa1d9a61010d",
 				"e7135cc4-baf6-4cff-9df7-faec6e2f9ef7",
 				"56a1d41f-55f8-492f-b889-1cd1b72398b3",
 				"dfb99cb1-7e68-496d-8d8b-0bb72b863b93",
@@ -192,13 +190,6 @@
 			"steps": []
 		},
 		{
-			"uuid": "cff94f93-1bad-4d51-ab22-8d3fa99391ea",
-			"title": "Make pattern background scroll",
-			"description": "",
-			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
-			"steps": []
-		},
-		{
 			"uuid": "b55cbba3-68ca-4c69-a954-f33807aa72ec",
 			"title": "Add bootsplash",
 			"description": "",
@@ -215,13 +206,6 @@
 		{
 			"uuid": "a387b9b1-f22c-4ca6-b675-9406919649a1",
 			"title": "Create levels",
-			"description": "",
-			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
-			"steps": []
-		},
-		{
-			"uuid": "78ecab1d-136d-4ff2-81f8-cb1b7ab26a32",
-			"title": "Make return point appear after getting required hits",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []
