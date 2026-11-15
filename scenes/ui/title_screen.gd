@@ -3,6 +3,7 @@ extends Menu
 const PENTAGON_FULL: AtlasTexture = preload("uid://c7febubhoht5n")
 
 @onready var levels_grid: GridContainer = %LevelsGrid
+@onready var pop: AudioStreamPlayer = $Pop
 
 
 func _ready() -> void:
@@ -13,6 +14,7 @@ func _ready() -> void:
 
 
 func _on_level_button_pressed(button: Button) -> void:
+	pop.play()
 	Globals.level_selected.emit(button.level)
 
 

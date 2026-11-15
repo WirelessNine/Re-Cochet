@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cyujrjm2clq8x" path="res://assets/particles/dust.png" id="3_hwrpx"]
 [ext_resource type="Texture2D" uid="uid://baamtv6ta751g" path="res://resources/textures/obstacles/wall.tres" id="4_ta044"]
 [ext_resource type="Material" uid="uid://c0mtr7tqnxlx7" path="res://resources/particles/weak_wall_particles.tres" id="6_ta044"]
+[ext_resource type="AudioStream" uid="uid://la53mnute0sx" path="res://assets/audio/conga.wav" id="7_0krcu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_as85p"]
 size = Vector2(16, 128)
@@ -37,3 +38,8 @@ lifetime = 0.5
 one_shot = true
 explosiveness = 1.0
 process_material = ExtResource("6_ta044")
+
+[node name="Hit" type="AudioStreamPlayer" parent="." unique_id=304388297]
+unique_name_in_owner = true
+stream = ExtResource("7_0krcu")
+volume_db = 5.0

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bniexn1cch48y" path="res://scenes/obstacles/string.gd" id="1_2hhs6"]
 [ext_resource type="Texture2D" uid="uid://cjw3nexaf1vw0" path="res://resources/textures/obstacles/string.tres" id="2_k5ec0"]
 [ext_resource type="Material" uid="uid://bipoqgphw5eb0" path="res://resources/materials/drop_shadow_material.tres" id="3_2hhs6"]
+[ext_resource type="AudioStream" uid="uid://m3i8i7f4ysgs" path="res://assets/audio/tamb_random.tres" id="4_lqviy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_as85p"]
 size = Vector2(6, 192)
@@ -27,3 +28,8 @@ texture = ExtResource("2_k5ec0")
 unique_name_in_owner = true
 shape = SubResource("RectangleShape2D_as85p")
 debug_color = Color(0, 0.5950001, 0.7, 0)
+
+[node name="Hit" type="AudioStreamPlayer" parent="." unique_id=758505382]
+unique_name_in_owner = true
+stream = ExtResource("4_lqviy")
+stream_paused = true

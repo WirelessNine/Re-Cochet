@@ -29,6 +29,7 @@ var hit_effect_tween: Tween
 @onready var hit_effect: Sprite2D = %HitEffect
 @onready var particles: GPUParticles2D = %Particles
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
+@onready var swoosh: AudioStreamPlayer = %Swoosh
 
 
 func _ready() -> void:
@@ -85,6 +86,8 @@ func _input(event: InputEvent) -> void:
 
 
 func _set_directional_velocity() -> void:
+	swoosh.play()
+
 	var speed_multiplier: float
 
 	if drag_distance >= MIN_DISTANCE_FOR_MAX:

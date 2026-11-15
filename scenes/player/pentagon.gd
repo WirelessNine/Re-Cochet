@@ -4,6 +4,7 @@ var collected: bool = false
 
 @onready var sprite: Sprite2D = %Sprite
 @onready var particles: GPUParticles2D = %Particles
+@onready var collect: AudioStreamPlayer = %Collect
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -13,6 +14,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is Player2D:
 		Globals.pentagon_collected.emit()
 		collected = true
+		collect.play()
 
 		var tween: Tween = create_tween().set_parallel()
 

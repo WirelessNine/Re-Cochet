@@ -16,6 +16,7 @@
 [ext_resource type="Material" uid="uid://c0mtr7tqnxlx7" path="res://resources/particles/weak_wall_particles.tres" id="14_y77df"]
 [ext_resource type="Material" uid="uid://dhhjef3jyrtoy" path="res://resources/particles/return_point_particles.tres" id="15_jqmgk"]
 [ext_resource type="Texture2D" uid="uid://bs3apfjkwcbqf" path="res://assets/bootsplash/title.png" id="16_to824"]
+[ext_resource type="AudioStream" uid="uid://bn75ryyrafbns" path="res://assets/audio/ui_pop_randomizer.tres" id="17_y77df"]
 
 [sub_resource type="Animation" id="Animation_to824"]
 length = 0.001
@@ -232,3 +233,7 @@ expand_mode = 1
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Bootsplash" unique_id=1008129559]
 libraries/ = SubResource("AnimationLibrary_jqmgk")
 autoplay = &"boot"
+
+[node name="Pop" type="AudioStreamPlayer" parent="." unique_id=608399046]
+stream = ExtResource("17_y77df")
+volume_db = -10.0

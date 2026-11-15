@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://51swrq5p36s8" path="res://scenes/player/pentagon.gd" id="1_7pjyk"]
 [ext_resource type="Texture2D" uid="uid://cltq8udap8obq" path="res://resources/textures/player/pentagon.tres" id="1_8ebbx"]
 [ext_resource type="Material" uid="uid://cqhauob2kf7e4" path="res://resources/particles/pentagon_particles.tres" id="3_w6u0c"]
+[ext_resource type="AudioStream" uid="uid://cgdsve112rnpc" path="res://assets/audio/metal_random.tres" id="4_voa21"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_as85p"]
 size = Vector2(36, 34)
@@ -67,5 +68,9 @@ amount = 32
 one_shot = true
 explosiveness = 1.0
 process_material = ExtResource("3_w6u0c")
+
+[node name="Collect" type="AudioStreamPlayer" parent="." unique_id=2086821343]
+unique_name_in_owner = true
+stream = ExtResource("4_voa21")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

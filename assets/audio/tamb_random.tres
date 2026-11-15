@@ -1,0 +1,8 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://m3i8i7f4ysgs"]
+
+[ext_resource type="AudioStream" uid="uid://jyo8s56bve50" path="res://assets/audio/tamb.wav" id="1_47n8a"]
+
+[resource]
+random_pitch = 1.0594631
+streams_count = 1
+stream_0/stream = ExtResource("1_47n8a")

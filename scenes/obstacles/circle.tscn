@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dpk2rfjrudpty" path="res://scenes/obstacles/wall.gd" id="1_mtws3"]
 [ext_resource type="Texture2D" uid="uid://udluvtuu1oko" path="res://resources/textures/obstacles/circle.tres" id="2_mtws3"]
 [ext_resource type="Material" uid="uid://bipoqgphw5eb0" path="res://resources/materials/drop_shadow_material.tres" id="3_ivjmd"]
+[ext_resource type="AudioStream" uid="uid://dfcd3dx1qhfiv" path="res://assets/audio/clap.wav" id="4_ggoh7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ru67q"]
 radius = 32.24903
@@ -22,3 +23,7 @@ texture = ExtResource("2_mtws3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1189307780]
 shape = SubResource("CircleShape2D_ru67q")
+
+[node name="Hit" type="AudioStreamPlayer" parent="." unique_id=802988162]
+unique_name_in_owner = true
+stream = ExtResource("4_ggoh7")

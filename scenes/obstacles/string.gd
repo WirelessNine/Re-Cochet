@@ -6,6 +6,7 @@ var activated: bool = false
 @onready var sprite: Sprite2D = %Sprite
 @onready var shadow: Sprite2D = %Shadow
 @onready var collision_shape: CollisionShape2D = %CollisionShape
+@onready var hit: AudioStreamPlayer = %Hit
 
 @export var targets: Dictionary[Node2D, Vector2]
 
@@ -17,6 +18,8 @@ func _touched() -> void:
 	activated = true
 	collision_shape.set_deferred(&"disabled", true)
 	shadow.hide()
+
+	hit.play()
 
 	_handle_target_obstacles()
 

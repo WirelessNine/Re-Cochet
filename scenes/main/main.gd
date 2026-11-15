@@ -25,6 +25,8 @@ var _shake_strength: float = 0.0
 @onready var fade: ColorRect = %Fade
 @onready var title_screen: Menu = %TitleScreen
 @onready var current_hits_label: Label = %CurrentHits
+@onready var win: AudioStreamPlayer = %Win
+@onready var kill: AudioStreamPlayer = %Kill
 
 
 func _ready() -> void:
@@ -122,6 +124,7 @@ func go_to_title_screen() -> void:
 
 func _on_level_failed() -> void:
 	current_level.kill_player()
+	kill.play()
 
 	await get_tree().create_timer(0.2).timeout
 
@@ -145,6 +148,8 @@ func _on_level_complete() -> void:
 
 	if current_level.pentagon_collected:
 		Globals.pentagon_levels[current_level.level_id] = true
+
+	win.play()
 
 	var tween: Tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 
@@ -183,4 +188,4 @@ func _on_level_complete() -> void:
 
 func _on_bounds_body_entered(body: Node2D) -> void:
 	if body is Player2D:
-		restart_level()
+		_on_level_failed()

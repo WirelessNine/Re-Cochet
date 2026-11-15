@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ex4hwa0lil6h" path="res://resources/textures/player/player.tres" id="2_cladr"]
 [ext_resource type="Texture2D" uid="uid://dopyqpbwisn6x" path="res://resources/textures/player/player_hit.tres" id="4_cladr"]
 [ext_resource type="Material" uid="uid://duhvkg2oym0pm" path="res://resources/particles/shatter_particles.tres" id="5_gw4ti"]
+[ext_resource type="AudioStream" uid="uid://51caiwdqyqga" path="res://assets/audio/swoosh_randomizer.tres" id="6_fuvcc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_as85p"]
 radius = 14.0
@@ -109,5 +110,9 @@ process_material = ExtResource("5_gw4ti")
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_pqjmp")
 speed_scale = 3.0
+
+[node name="Swoosh" type="AudioStreamPlayer" parent="." unique_id=161699384]
+unique_name_in_owner = true
+stream = ExtResource("6_fuvcc")
 
 [connection signal="body_entered" from="Area" to="." method="_on_area_body_entered"]

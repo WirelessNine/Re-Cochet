@@ -21,6 +21,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"9f9bcaf1-f445-4772-8e94-599a2093bec8",
 				"b55cbba3-68ca-4c69-a954-f33807aa72ec",
 				"4ac2cc8e-cfb7-4786-90d2-fa1d9a61010d",
 				"e7135cc4-baf6-4cff-9df7-faec6e2f9ef7",
@@ -261,6 +262,13 @@
 		{
 			"uuid": "56a1d41f-55f8-492f-b889-1cd1b72398b3",
 			"title": "Add background to levels",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "9f9bcaf1-f445-4772-8e94-599a2093bec8",
+			"title": "Add sound and music",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []

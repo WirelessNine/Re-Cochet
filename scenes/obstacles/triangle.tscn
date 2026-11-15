@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dpk2rfjrudpty" path="res://scenes/obstacles/wall.gd" id="1_34uyr"]
 [ext_resource type="Texture2D" uid="uid://dug58ga606054" path="res://resources/textures/obstacles/triangle.tres" id="2_34uyr"]
 [ext_resource type="Material" uid="uid://bipoqgphw5eb0" path="res://resources/materials/drop_shadow_material.tres" id="3_ajhgl"]
+[ext_resource type="AudioStream" uid="uid://dfcd3dx1qhfiv" path="res://assets/audio/clap.wav" id="4_ru67q"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ivjmd"]
 points = PackedVector2Array(0, -32, -31, 32, 31, 32)
@@ -22,3 +23,7 @@ texture = ExtResource("2_34uyr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1189307780]
 shape = SubResource("ConvexPolygonShape2D_ivjmd")
+
+[node name="Hit" type="AudioStreamPlayer" parent="." unique_id=633172797]
+unique_name_in_owner = true
+stream = ExtResource("4_ru67q")

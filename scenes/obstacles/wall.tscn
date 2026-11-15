@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dpk2rfjrudpty" path="res://scenes/obstacles/wall.gd" id="1_2jsn7"]
 [ext_resource type="Material" uid="uid://bipoqgphw5eb0" path="res://resources/materials/drop_shadow_material.tres" id="1_amwi0"]
 [ext_resource type="Texture2D" uid="uid://baamtv6ta751g" path="res://resources/textures/obstacles/wall.tres" id="1_fdlmw"]
+[ext_resource type="AudioStream" uid="uid://dfcd3dx1qhfiv" path="res://assets/audio/clap.wav" id="4_uor2m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_as85p"]
 size = Vector2(16, 128)
@@ -22,3 +23,8 @@ texture = ExtResource("1_fdlmw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2086472865]
 shape = SubResource("RectangleShape2D_as85p")
 debug_color = Color(0, 0.5950001, 0.7, 0)
+
+[node name="Hit" type="AudioStreamPlayer" parent="." unique_id=1773874511]
+unique_name_in_owner = true
+stream = ExtResource("4_uor2m")
+stream_paused = true

@@ -13,6 +13,7 @@ var colors: Array[Color] = [
 ]
 
 @onready var sprite: Sprite2D = %Sprite
+@onready var hit: AudioStreamPlayer = %Hit
 
 
 func _touched() -> void:
@@ -25,3 +26,5 @@ func _touched() -> void:
 
 	tween.tween_property(sprite, ^"self_modulate", Color.WHITE, 0.5)
 	tween.tween_property(sprite, ^"scale", Vector2.ONE, 0.2)
+
+	hit.play()
