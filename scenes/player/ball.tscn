@@ -19,6 +19,43 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 [sub_resource type="CircleShape2D" id="CircleShape2D_syx3y"]
 radius = 14.035668
 
+[sub_resource type="Animation" id="Animation_gw4ti"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_fuvcc"]
+resource_name = "spin"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pqjmp"]
+_data = {
+&"RESET": SubResource("Animation_gw4ti"),
+&"spin": SubResource("Animation_fuvcc")
+}
+
 [node name="Ball" type="CharacterBody2D" unique_id=765945013]
 motion_mode = 1
 script = ExtResource("1_jxcsf")
@@ -67,5 +104,10 @@ amount = 32
 one_shot = true
 explosiveness = 1.0
 process_material = ExtResource("5_gw4ti")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1364445202]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_pqjmp")
+speed_scale = 3.0
 
 [connection signal="body_entered" from="Area" to="." method="_on_area_body_entered"]

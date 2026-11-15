@@ -27,6 +27,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"dfb99cb1-7e68-496d-8d8b-0bb72b863b93",
 				"c010a7d4-206f-4ca4-8770-19936add06ba",
 				"d7b7a6a3-e34e-4a5d-b762-40ae3195e542",
 				"f7679ece-7b55-4f6b-9928-82aef016af5a",
@@ -262,6 +263,13 @@
 		{
 			"uuid": "c010a7d4-206f-4ca4-8770-19936add06ba",
 			"title": "Add the levels",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "dfb99cb1-7e68-496d-8d8b-0bb72b863b93",
+			"title": "Tweak the player",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []

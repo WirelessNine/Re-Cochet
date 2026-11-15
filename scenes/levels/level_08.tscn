@@ -26,11 +26,6 @@ unique_name_in_owner = true
 position = Vector2(496, 256)
 metadata/_scene_painted = true
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=94666358]
-enabled = false
-zoom = Vector2(0.5, 0.5)
-metadata/_edit_lock_ = true
-
 [node name="Label" type="Label" parent="." unique_id=659194196]
 modulate = Color(0.7294262, 0.74694306, 0.5789778, 1)
 z_index = -1

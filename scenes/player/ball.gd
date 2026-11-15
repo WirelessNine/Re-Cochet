@@ -5,7 +5,7 @@ signal obstacle_hit
 
 const RETURN_POINT: PackedScene = preload("uid://cfaar6j0h3o0c")
 
-const SPEED: float = 800.0
+const SPEED: float = 1000.0
 const MIN_DISTANCE_FOR_MAX: float = 200.0
 const DRAG_PREVIEW_POINT: int = 1
 
@@ -28,6 +28,7 @@ var hit_effect_tween: Tween
 @onready var sprite: Sprite2D = %Sprite
 @onready var hit_effect: Sprite2D = %HitEffect
 @onready var particles: GPUParticles2D = %Particles
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
 
 
 func _ready() -> void:
@@ -89,9 +90,11 @@ func _set_directional_velocity() -> void:
 	if drag_distance >= MIN_DISTANCE_FOR_MAX:
 		speed_multiplier = 1.0
 	else:
-		speed_multiplier = remap(drag_distance, 1.0, MIN_DISTANCE_FOR_MAX, 0.1, 1.0)
+		speed_multiplier = remap(drag_distance, 1.0, MIN_DISTANCE_FOR_MAX, 0.5, 1.0)
 
 	velocity = drag_direction * (SPEED * speed_multiplier)
+	animation_player.speed_scale = 3.0 * speed_multiplier
+	animation_player.play(&"spin")
 
 
 func _handle_reflection(last_velocity: Vector2) -> void:
