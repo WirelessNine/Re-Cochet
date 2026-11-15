@@ -11,14 +11,11 @@
 			"uuid": "4df57c2e-57da-42bd-98ab-a92941f5f463",
 			"title": "Todo",
 			"tasks": [
-				"bc7023d4-9fc7-4c99-9df4-183079703b16",
-				"a3013ec8-c374-41d7-b64b-28aba09d9969",
 				"cff94f93-1bad-4d51-ab22-8d3fa99391ea",
 				"b55cbba3-68ca-4c69-a954-f33807aa72ec",
 				"4ac2cc8e-cfb7-4786-90d2-fa1d9a61010d",
 				"78ecab1d-136d-4ff2-81f8-cb1b7ab26a32",
-				"e7135cc4-baf6-4cff-9df7-faec6e2f9ef7",
-				"15da2e28-f2e8-4024-9271-e2b9a757364b"
+				"e7135cc4-baf6-4cff-9df7-faec6e2f9ef7"
 			]
 		},
 		{
@@ -30,6 +27,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"079a94a8-1b45-40fd-9525-aaa7daf62bb3",
 				"af065333-5c89-4145-849c-ee3e675b53fe",
 				"a387b9b1-f22c-4ca6-b675-9406919649a1",
 				"516876dc-568e-4625-8de3-052683bde682",
@@ -100,20 +98,6 @@
 		{
 			"uuid": "96fe7c89-0848-4b08-9a26-d796a7021d03",
 			"title": "Add shape walls",
-			"description": "",
-			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
-			"steps": []
-		},
-		{
-			"uuid": "bc7023d4-9fc7-4c99-9df4-183079703b16",
-			"title": "Add speed wall",
-			"description": "",
-			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
-			"steps": []
-		},
-		{
-			"uuid": "a3013ec8-c374-41d7-b64b-28aba09d9969",
-			"title": "Add ball trail",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []
@@ -245,15 +229,15 @@
 			"steps": []
 		},
 		{
-			"uuid": "15da2e28-f2e8-4024-9271-e2b9a757364b",
-			"title": "Add teleporter obstacle",
+			"uuid": "af065333-5c89-4145-849c-ee3e675b53fe",
+			"title": "Fix shake and drag preview",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []
 		},
 		{
-			"uuid": "af065333-5c89-4145-849c-ee3e675b53fe",
-			"title": "Fix shake and drag preview",
+			"uuid": "079a94a8-1b45-40fd-9525-aaa7daf62bb3",
+			"title": "Make player shatter",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []

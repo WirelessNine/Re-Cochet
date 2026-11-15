@@ -27,10 +27,19 @@ func _exit_tree() -> void:
 	Globals.level_completed.disconnect(_on_level_complete)
 
 
+func kill_player() -> void:
+	ball.movement_disabled = true
+	ball.particles.emitting = true
+	ball.sprite.hide()
+
+
 func _on_obstacle_hit() -> void:
 	Globals.shake_camera_requested.emit((15.0))
 
 	current_hits -= 1
+
+	if current_hits < 0:
+		Globals.level_failed.emit()
 
 	Globals.current_hits_changed.emit(clamp(current_hits, 0, 99))
 

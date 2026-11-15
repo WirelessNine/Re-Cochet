@@ -22,6 +22,7 @@ func _ready() -> void:
 	MenuManager.set_transition(fade, TRANSITION_FADE)
 
 	Globals.level_selected.connect(_on_level_selected)
+	Globals.level_failed.connect(_on_level_failed)
 	Globals.current_hits_changed.connect(
 		func(new_value: int) -> void:
 			current_hits_label.text = str(new_value),
@@ -107,6 +108,14 @@ func go_to_title_screen() -> void:
 	_trans_db = false
 
 	MenuManager.play_transition(false)
+
+
+func _on_level_failed() -> void:
+	current_level.kill_player()
+
+	await get_tree().create_timer(0.2).timeout
+
+	restart_level()
 
 
 func _on_level_selected(level: PackedScene) -> void:

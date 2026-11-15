@@ -1,7 +1,9 @@
 extends Node
 
 signal level_selected(level: PackedScene)
+signal level_failed
 signal level_completed
+
 signal pentagon_collected
 signal current_hits_changed(new_value: int)
 

@@ -27,6 +27,7 @@ var hit_effect_tween: Tween
 @onready var drag_preview: Line2D = %DragPreview
 @onready var sprite: Sprite2D = %Sprite
 @onready var hit_effect: Sprite2D = %HitEffect
+@onready var particles: GPUParticles2D = %Particles
 
 
 func _ready() -> void:
@@ -37,6 +38,8 @@ func _ready() -> void:
 	drag_preview.clear_points()
 	drag_preview.add_point(Vector2.ZERO)
 	drag_preview.add_point(Vector2.ZERO)
+
+	drag_disabled = false
 
 
 func _physics_process(_delta: float) -> void:
