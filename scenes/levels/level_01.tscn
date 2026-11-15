@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scripts/level_2d.gd" id="1_uvc87"]
 [ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="2_i2aat"]
 [ext_resource type="PackedScene" uid="uid://d7puovc8g6ot" path="res://scenes/player/pentagon.tscn" id="4_uvc87"]
+[ext_resource type="PackedScene" uid="uid://cfaar6j0h3o0c" path="res://scenes/obstacles/return_point.tscn" id="5_qdh5e"]
 
 [node name="Level01" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_uvc87")
@@ -24,3 +25,7 @@ metadata/_scene_painted = true
 [node name="Pentagon" parent="." unique_id=833800454 instance=ExtResource("4_uvc87")]
 position = Vector2(456, 0)
 metadata/_scene_painted = true
+
+[node name="ReturnPoint" parent="." unique_id=1532338156 instance=ExtResource("5_qdh5e")]
+unique_name_in_owner = true
+position = Vector2(-1, -266)

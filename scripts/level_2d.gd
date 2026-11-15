@@ -10,6 +10,7 @@ var pentagon_collected: bool = false
 var current_hits: int = 0
 
 @onready var ball: Player2D = %Ball
+@onready var return_point: Area2D = %ReturnPoint
 
 
 func _ready() -> void:
@@ -50,9 +51,6 @@ func _on_pentagon_collected() -> void:
 
 
 func _on_level_complete() -> void:
-	if not current_hits <= 0:
-		return
-
 	ball.movement_disabled = true
 	Globals.completed_levels[level_id] = true
 
@@ -63,7 +61,7 @@ func _on_level_complete() -> void:
 
 	tween.set_parallel(true)
 
-	tween.tween_property(ball, ^"global_position", ball.start_position, 0.5)
+	tween.tween_property(ball, ^"global_position", return_point.global_position, 0.5)
 	tween.tween_property(ball, ^"scale", Vector2.ZERO, 0.5)
 	tween.tween_property(ball, ^"modulate:a", 0.0, 0.5)
 

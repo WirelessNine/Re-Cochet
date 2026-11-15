@@ -46,16 +46,6 @@ func _physics_process(_delta: float) -> void:
 	if not movement_started or movement_disabled:
 		return
 
-	if not return_point_created:
-		if global_position.distance_to(start_position) > 150:
-			return_point_created = true
-
-			var return_point: Area2D = RETURN_POINT.instantiate()
-
-			get_parent().add_child(return_point)
-
-			return_point.global_position = start_position
-
 	var current_velocity: Vector2 = velocity
 
 	move_and_slide()

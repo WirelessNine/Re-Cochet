@@ -27,6 +27,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"d7b7a6a3-e34e-4a5d-b762-40ae3195e542",
 				"f7679ece-7b55-4f6b-9928-82aef016af5a",
 				"079a94a8-1b45-40fd-9525-aaa7daf62bb3",
 				"af065333-5c89-4145-849c-ee3e675b53fe",
@@ -246,6 +247,13 @@
 		{
 			"uuid": "f7679ece-7b55-4f6b-9928-82aef016af5a",
 			"title": "FIX THE DAMN PLAYER",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "d7b7a6a3-e34e-4a5d-b762-40ae3195e542",
+			"title": "Rework the return point",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []

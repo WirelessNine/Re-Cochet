@@ -7,6 +7,9 @@ extends Area2D
 func _ready() -> void:
 	sprite.scale = Vector2.ONE * 2.0
 	sprite.modulate.a = 0.0
+
+	await get_tree().create_timer(0.1).timeout
+
 	particles.emitting = true
 
 	var tween: Tween = create_tween().set_parallel(true)
