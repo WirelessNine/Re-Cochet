@@ -14,8 +14,7 @@
 				"cff94f93-1bad-4d51-ab22-8d3fa99391ea",
 				"b55cbba3-68ca-4c69-a954-f33807aa72ec",
 				"4ac2cc8e-cfb7-4786-90d2-fa1d9a61010d",
-				"78ecab1d-136d-4ff2-81f8-cb1b7ab26a32",
-				"e7135cc4-baf6-4cff-9df7-faec6e2f9ef7"
+				"78ecab1d-136d-4ff2-81f8-cb1b7ab26a32"
 			]
 		},
 		{
@@ -27,6 +26,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"e7135cc4-baf6-4cff-9df7-faec6e2f9ef7",
 				"56a1d41f-55f8-492f-b889-1cd1b72398b3",
 				"dfb99cb1-7e68-496d-8d8b-0bb72b863b93",
 				"c010a7d4-206f-4ca4-8770-19936add06ba",

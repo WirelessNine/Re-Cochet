@@ -12,5 +12,10 @@ func play(old_level: int, new_level: int) -> void:
 	animation_player.play(&"default")
 
 
+func _input(_event: InputEvent) -> void:
+	if visible:
+		accept_event()
+
+
 func _opened() -> void:
 	animation_player.play(&"RESET")
