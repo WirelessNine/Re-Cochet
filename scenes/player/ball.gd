@@ -6,10 +6,10 @@ const RETURN_POINT: PackedScene = preload("uid://cfaar6j0h3o0c")
 signal obstacle_hit
 
 const SPEED: float = 800.0
-const MIN_DISTANCE_FOR_MAX: float = 100.0
+const MIN_DISTANCE_FOR_MAX: float = 200.0
 const DRAG_PREVIEW_POINT: int = 1
 
-var drag_start_pos: Vector2
+var drag_started: bool = false
 var drag_current_pos: Vector2
 
 var drag_direction: Vector2
@@ -72,20 +72,25 @@ func _input(event: InputEvent) -> void:
 			return
 
 		if event.is_pressed():
-			drag_start_pos = event.global_position
 			drag_preview.show()
+			drag_preview.set_point_position(DRAG_PREVIEW_POINT, get_local_mouse_position())
+			drag_current_pos = get_global_mouse_position()
+			drag_started = true
 		else:
-			drag_direction = drag_current_pos.direction_to(drag_start_pos)
-			drag_distance = drag_current_pos.distance_to(drag_start_pos)
+			drag_direction = drag_current_pos.direction_to(global_position)
+			drag_distance = drag_current_pos.distance_to(global_position)
 			start_position = global_position
 			movement_started = true
 			drag_preview.hide()
 
 			_set_directional_velocity()
 
-	if event is InputEventMouseMotion:
-		drag_current_pos = event.global_position
+	if event is InputEventMouseMotion and drag_started:
+		drag_current_pos = get_global_mouse_position()
 		drag_preview.set_point_position(DRAG_PREVIEW_POINT, get_local_mouse_position())
+
+		if not drag_preview.visible:
+			drag_preview.show()
 
 
 func _set_directional_velocity() -> void:

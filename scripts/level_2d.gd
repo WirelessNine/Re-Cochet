@@ -28,13 +28,14 @@ func _exit_tree() -> void:
 
 
 func kill_player() -> void:
+	Globals.shake_camera_requested.emit((15.0))
 	ball.movement_disabled = true
 	ball.particles.emitting = true
 	ball.sprite.hide()
 
 
 func _on_obstacle_hit() -> void:
-	Globals.shake_camera_requested.emit((15.0))
+	Globals.shake_camera_requested.emit((5.0))
 
 	current_hits -= 1
 

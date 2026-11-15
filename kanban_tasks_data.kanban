@@ -27,6 +27,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"f7679ece-7b55-4f6b-9928-82aef016af5a",
 				"079a94a8-1b45-40fd-9525-aaa7daf62bb3",
 				"af065333-5c89-4145-849c-ee3e675b53fe",
 				"a387b9b1-f22c-4ca6-b675-9406919649a1",
@@ -238,6 +239,13 @@
 		{
 			"uuid": "079a94a8-1b45-40fd-9525-aaa7daf62bb3",
 			"title": "Make player shatter",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "f7679ece-7b55-4f6b-9928-82aef016af5a",
+			"title": "FIX THE DAMN PLAYER",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []
