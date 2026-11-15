@@ -15,6 +15,92 @@
 [ext_resource type="Material" uid="uid://cqhauob2kf7e4" path="res://resources/particles/pentagon_particles.tres" id="13_to824"]
 [ext_resource type="Material" uid="uid://c0mtr7tqnxlx7" path="res://resources/particles/weak_wall_particles.tres" id="14_y77df"]
 [ext_resource type="Material" uid="uid://dhhjef3jyrtoy" path="res://resources/particles/return_point_particles.tres" id="15_jqmgk"]
+[ext_resource type="Texture2D" uid="uid://bs3apfjkwcbqf" path="res://assets/bootsplash/title.png" id="16_to824"]
+
+[sub_resource type="Animation" id="Animation_to824"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:mouse_filter")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_y77df"]
+resource_name = "boot"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.7, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:mouse_filter")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jqmgk"]
+_data = {
+&"RESET": SubResource("Animation_to824"),
+&"boot": SubResource("Animation_y77df")
+}
 
 [node name="TitleScreen" type="PanelContainer" unique_id=2008179970]
 anchors_preset = 15
@@ -98,12 +184,6 @@ layout_mode = 2
 level = ExtResource("11_lddph")
 level_name = "Level 8"
 
-[node name="Label" type="Label" parent="." unique_id=1279683779]
-layout_mode = 2
-size_flags_vertical = 8
-text = "WirelessNine"
-horizontal_alignment = 1
-
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=748635517]
 position = Vector2(-293, 119)
 process_material = ExtResource("12_tqags")
@@ -119,3 +199,36 @@ process_material = ExtResource("14_y77df")
 [node name="GPUParticles2D4" type="GPUParticles2D" parent="." unique_id=476657381]
 position = Vector2(-272, 289)
 process_material = ExtResource("15_jqmgk")
+
+[node name="Bootsplash" type="CanvasLayer" parent="." unique_id=1204113495]
+
+[node name="ColorRect" type="ColorRect" parent="Bootsplash" unique_id=1854657365]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.078431375, 0.105882354, 0.15294118, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Bootsplash/ColorRect" unique_id=993483466]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.5
+offset_top = -26.25
+offset_right = 127.5
+offset_bottom = 26.25
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("16_to824")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bootsplash" unique_id=1008129559]
+libraries/ = SubResource("AnimationLibrary_jqmgk")
+autoplay = &"boot"
