@@ -30,6 +30,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"af065333-5c89-4145-849c-ee3e675b53fe",
 				"a387b9b1-f22c-4ca6-b675-9406919649a1",
 				"516876dc-568e-4625-8de3-052683bde682",
 				"44317aa4-ef18-4d75-b461-ed2508df905a",
@@ -246,6 +247,13 @@
 		{
 			"uuid": "15da2e28-f2e8-4024-9271-e2b9a757364b",
 			"title": "Add teleporter obstacle",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "af065333-5c89-4145-849c-ee3e675b53fe",
+			"title": "Fix shake and drag preview",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []

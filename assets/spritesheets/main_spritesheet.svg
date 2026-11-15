@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="8"
-     inkscape:cx="61.75"
-     inkscape:cy="82.1875"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="107.48023"
+     inkscape:cy="75.130095"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -54,16 +54,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="fill:#cecff0;fill-opacity:1;stroke:#141b27;stroke-width:0.529167;stroke-dasharray:none;stroke-opacity:1"
-       id="rect2"
-       width="7.9368329"
-       height="7.9368329"
-       x="10.133511"
-       y="14.0156"
-       ry="3.9684165"
-       inkscape:label="ball"
-       rx="3.9684165" />
     <path
        id="rect3"
        style="fill:#cecff0;stroke:#141b27;stroke-width:0.529167;fill-opacity:1;stroke-opacity:1"
@@ -215,5 +205,28 @@
        inkscape:transform-center-y="-0.43276361"
        transform="matrix(0.49817611,0,0,0.48939178,-7.9429835,-28.419489)"
        inkscape:transform-center-x="1.0243539e-06" />
+    <g
+       id="g1"
+       inkscape:label="player">
+      <rect
+         style="fill:#bae6ff;fill-opacity:1;stroke:#141b27;stroke-width:0.529167;stroke-dasharray:none;stroke-opacity:1"
+         id="rect2"
+         width="7.9368329"
+         height="7.9368329"
+         x="10.133511"
+         y="14.0156"
+         ry="3.9684165"
+         inkscape:label="ball"
+         rx="3.9684165" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.58751;stroke-dasharray:3.175, 3.175;paint-order:markers fill stroke"
+         id="rect1"
+         width="1.9671965"
+         height="1.9905825"
+         x="11.67464"
+         y="15.259625"
+         rx="16.139582"
+         ry="0.99529123" />
+    </g>
   </g>
 </svg>

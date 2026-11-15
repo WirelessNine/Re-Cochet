@@ -15,6 +15,7 @@ var drag_current_pos: Vector2
 var drag_direction: Vector2
 var drag_distance: float
 
+var drag_disabled: bool = true
 var movement_started: bool = false
 var movement_disabled: bool = false
 
@@ -30,7 +31,12 @@ var hit_effect_tween: Tween
 
 func _ready() -> void:
 	drag_preview.hide()
+	hit_effect.show()
 	hit_effect.modulate.a = 0.0
+
+	drag_preview.clear_points()
+	drag_preview.add_point(Vector2.ZERO)
+	drag_preview.add_point(Vector2.ZERO)
 
 
 func _physics_process(_delta: float) -> void:
@@ -54,8 +60,8 @@ func _physics_process(_delta: float) -> void:
 	_handle_reflection(current_velocity)
 
 
-func _unhandled_input(event: InputEvent) -> void:
-	if movement_started:
+func _input(event: InputEvent) -> void:
+	if movement_started or drag_disabled:
 		return
 
 	if event is InputEventMouseButton:

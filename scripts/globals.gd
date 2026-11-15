@@ -5,6 +5,8 @@ signal level_completed
 signal pentagon_collected
 signal current_hits_changed(new_value: int)
 
+signal shake_camera_requested(strength: float)
+
 var completed_levels: Dictionary[int, bool] = {
 	0: false,
 	1: false,

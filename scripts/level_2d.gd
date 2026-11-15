@@ -1,50 +1,42 @@
 class_name Level2D
 extends Node2D
 
-const SHAKE_FADE: float = 10.0
-
-var _shake_strength: float = 0.0
-var pentagon_collected: bool = false
-
 @export var level_id: int = 0
 @export var canvas_color: Color
 @export var min_hits_required: int = 0
 
-@onready var camera: Camera2D = %Camera
-@onready var ball: Player2D = %Ball
+var pentagon_collected: bool = false
 
 var current_hits: int = 0
+
+@onready var ball: Player2D = %Ball
 
 
 func _ready() -> void:
 	ball.obstacle_hit.connect(_on_obstacle_hit)
 	current_hits = min_hits_required
 
-	Globals.pentagon_collected.connect(set.bind(&"pentagon_collected", true))
+	Globals.pentagon_collected.connect(_on_pentagon_collected)
 	Globals.level_completed.connect(_on_level_complete)
 
 	Globals.current_hits_changed.emit(clamp(current_hits, 0, 99))
 
 
-func apply_shake(amount: float) -> void:
-	_shake_strength = amount
-
-
-func _process(delta: float) -> void:
-	if _shake_strength > 0:
-		_shake_strength = lerpf(_shake_strength, 0.0, SHAKE_FADE * delta)
-		camera.offset = Vector2(
-			randf_range(-_shake_strength, _shake_strength),
-			randf_range(-_shake_strength, _shake_strength),
-		)
+func _exit_tree() -> void:
+	Globals.pentagon_collected.disconnect(_on_pentagon_collected)
+	Globals.level_completed.disconnect(_on_level_complete)
 
 
 func _on_obstacle_hit() -> void:
-	apply_shake(3.0)
+	Globals.shake_camera_requested.emit((15.0))
 
 	current_hits -= 1
 
 	Globals.current_hits_changed.emit(clamp(current_hits, 0, 99))
+
+
+func _on_pentagon_collected() -> void:
+	pentagon_collected = true
 
 
 func _on_level_complete() -> void:

@@ -9,11 +9,6 @@ level_id = 3
 canvas_color = Color(0.74509805, 0.60784316, 1, 1)
 min_hits_required = 4
 
-[node name="Camera" type="Camera2D" parent="." unique_id=271012844]
-unique_name_in_owner = true
-zoom = Vector2(0.5, 0.5)
-process_callback = 0
-
 [node name="Ball" parent="." unique_id=765945013 instance=ExtResource("2_j6e47")]
 unique_name_in_owner = true
 position = Vector2(-555, 0)
