@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cgykd6c87bild"]
+
+[ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scripts/level_2d.gd" id="1_tbrpi"]
+[ext_resource type="PackedScene" uid="uid://dhu4mu7mc1ft2" path="res://scenes/player/ball.tscn" id="2_yc2un"]
+[ext_resource type="PackedScene" uid="uid://cfaar6j0h3o0c" path="res://scenes/obstacles/return_point.tscn" id="3_s7m4s"]
+[ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="4_6h3uw"]
+[ext_resource type="PackedScene" uid="uid://bmm0nbe82ftka" path="res://scenes/obstacles/string.tscn" id="5_17n5y"]
+[ext_resource type="PackedScene" uid="uid://d7puovc8g6ot" path="res://scenes/player/pentagon.tscn" id="5_s7m4s"]
+[ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="6_tg547"]
+[ext_resource type="PackedScene" uid="uid://cg46m5aphtvcl" path="res://scenes/obstacles/triangle.tscn" id="7_yc2un"]
+
+[node name="Level06" type="Node2D" unique_id=1967266403]
+script = ExtResource("1_tbrpi")
+level_id = 5
+canvas_color = Color(1, 0.9490196, 0.81960785, 1)
+max_hits = 3
+
+[node name="Ball" parent="." unique_id=765945013 instance=ExtResource("2_yc2un")]
+unique_name_in_owner = true
+position = Vector2(0, -192)
+
+[node name="ReturnPoint" parent="." unique_id=1532338156 instance=ExtResource("3_s7m4s")]
+unique_name_in_owner = true
+position = Vector2(0, 48)
+metadata/_scene_painted = true
+
+[node name="Pentagon" parent="." unique_id=833800454 instance=ExtResource("5_s7m4s")]
+position = Vector2(-240, 64)
+metadata/_scene_painted = true
+
+[node name="String" parent="." unique_id=1139074267 node_paths=PackedStringArray("targets") instance=ExtResource("5_17n5y")]
+position = Vector2(-128, -128)
+targets = {
+NodePath("../Wall"): Vector2(-30, 0)
+}
+metadata/_scene_painted = true
+
+[node name="String2" parent="." unique_id=1566483155 node_paths=PackedStringArray("targets") instance=ExtResource("5_17n5y")]
+position = Vector2(128, -128)
+targets = {
+NodePath("../Triangle"): Vector2(0, 128)
+}
+metadata/_scene_painted = true
+
+[node name="WeakWall" parent="." unique_id=2105004682 instance=ExtResource("4_6h3uw")]
+position = Vector2(-176, -128)
+metadata/_scene_painted = true
+
+[node name="WeakWall2" parent="." unique_id=778277301 instance=ExtResource("4_6h3uw")]
+position = Vector2(176, -80)
+metadata/_scene_painted = true
+
+[node name="Wall" parent="." unique_id=251030527 instance=ExtResource("6_tg547")]
+position = Vector2(-272, 111.999985)
+rotation = -0.24609143
+metadata/_scene_painted = true
+
+[node name="Triangle" parent="." unique_id=350941581 instance=ExtResource("7_yc2un")]
+rotation = 1.1868238
+metadata/_scene_painted = true
+
+[node name="Label" type="Label" parent="." unique_id=1040153952]
+modulate = Color(0.99999934, 0.8378104, 0.39864922, 1)
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.0
+offset_top = 160.0
+offset_right = 205.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"label_something"
+text = "mmfgh... triangle..."

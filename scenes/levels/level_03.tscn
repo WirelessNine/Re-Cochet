@@ -3,39 +3,57 @@
 [ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scripts/level_2d.gd" id="1_4wrbh"]
 [ext_resource type="PackedScene" uid="uid://dhu4mu7mc1ft2" path="res://scenes/player/ball.tscn" id="2_ps4tf"]
 [ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="3_4wrbh"]
-[ext_resource type="PackedScene" uid="uid://d7puovc8g6ot" path="res://scenes/player/pentagon.tscn" id="4_ps4tf"]
+[ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="4_lcxk4"]
+[ext_resource type="PackedScene" uid="uid://cfaar6j0h3o0c" path="res://scenes/obstacles/return_point.tscn" id="5_r8ojw"]
 
 [node name="Level03" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_4wrbh")
 level_id = 2
 canvas_color = Color(0.7294118, 0.9019608, 1, 1)
-min_hits_required = 3
+max_hits = 5
 
 [node name="Ball" parent="." unique_id=765945013 instance=ExtResource("2_ps4tf")]
 unique_name_in_owner = true
 
+[node name="ReturnPoint" parent="." unique_id=1532338156 instance=ExtResource("5_r8ojw")]
+unique_name_in_owner = true
+position = Vector2(336, -128)
+metadata/_scene_painted = true
+
 [node name="WeakWall" parent="." unique_id=2105004682 instance=ExtResource("3_4wrbh")]
-position = Vector2(-144, 0)
+position = Vector2(-80, 0)
 metadata/_scene_painted = true
 
-[node name="WeakWall2" parent="." unique_id=1195274857 instance=ExtResource("3_4wrbh")]
-position = Vector2(104, 0)
+[node name="WeakWall4" parent="." unique_id=443101600 instance=ExtResource("3_4wrbh")]
+position = Vector2(-128, 0)
 metadata/_scene_painted = true
 
-[node name="WeakWall3" parent="." unique_id=1085012469 instance=ExtResource("3_4wrbh")]
-position = Vector2(272, 0)
+[node name="WeakWall2" parent="." unique_id=1539342142 instance=ExtResource("3_4wrbh")]
+position = Vector2(80, 0)
 metadata/_scene_painted = true
 
-[node name="WeakWall4" parent="." unique_id=711604468 instance=ExtResource("3_4wrbh")]
-position = Vector2(104, 208)
-rotation = 1.5707964
+[node name="WeakWall3" parent="." unique_id=254462588 instance=ExtResource("3_4wrbh")]
+position = Vector2(224, 0)
 metadata/_scene_painted = true
 
-[node name="WeakWall5" parent="." unique_id=938956256 instance=ExtResource("3_4wrbh")]
-position = Vector2(104, -232)
-rotation = 1.5707964
+[node name="Wall" parent="." unique_id=251030527 instance=ExtResource("4_lcxk4")]
+position = Vector2(336, 16)
+rotation = 0.7853982
 metadata/_scene_painted = true
 
-[node name="Pentagon" parent="." unique_id=833800454 instance=ExtResource("4_ps4tf")]
-position = Vector2(104, -192)
-metadata/_scene_painted = true
+[node name="Label" type="Label" parent="." unique_id=1202749577]
+modulate = Color(0.30632776, 0.7748187, 0.9999997, 1)
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = 80.0
+offset_right = 186.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"label_something"
+text = "They be breaking"

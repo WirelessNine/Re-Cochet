@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://cawixk167f2hd"]
+
+[ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scripts/level_2d.gd" id="1_hqfam"]
+[ext_resource type="PackedScene" uid="uid://dhu4mu7mc1ft2" path="res://scenes/player/ball.tscn" id="2_836dv"]
+[ext_resource type="PackedScene" uid="uid://cfaar6j0h3o0c" path="res://scenes/obstacles/return_point.tscn" id="3_ot78m"]
+[ext_resource type="PackedScene" uid="uid://bmm0nbe82ftka" path="res://scenes/obstacles/string.tscn" id="5_pe0ra"]
+[ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="5_ywrx1"]
+[ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="6_nodfw"]
+
+[node name="Level05" type="Node2D" unique_id=1967266403]
+script = ExtResource("1_hqfam")
+level_id = 4
+canvas_color = Color(1, 0.32941177, 0.4392157, 1)
+max_hits = 3
+
+[node name="Ball" parent="." unique_id=765945013 instance=ExtResource("2_836dv")]
+unique_name_in_owner = true
+position = Vector2(-128, 0)
+
+[node name="ReturnPoint" parent="." unique_id=1532338156 instance=ExtResource("3_ot78m")]
+unique_name_in_owner = true
+position = Vector2(176, 0)
+metadata/_scene_painted = true
+
+[node name="WeakWall" parent="." unique_id=2105004682 instance=ExtResource("5_ywrx1")]
+position = Vector2(-48, 0)
+metadata/_scene_painted = true
+
+[node name="WeakWall2" parent="." unique_id=1135327227 instance=ExtResource("5_ywrx1")]
+position = Vector2(-272, 0)
+metadata/_scene_painted = true
+
+[node name="String" parent="." unique_id=1139074267 node_paths=PackedStringArray("targets") instance=ExtResource("5_pe0ra")]
+position = Vector2(-240, 0)
+targets = {
+NodePath("../WeakWall3"): Vector2(0, 160)
+}
+metadata/_scene_painted = true
+
+[node name="String2" parent="." unique_id=689134879 node_paths=PackedStringArray("targets") instance=ExtResource("5_pe0ra")]
+position = Vector2(-352, 0)
+targets = {
+NodePath("../Wall"): Vector2(0, -160)
+}
+metadata/_scene_painted = true
+
+[node name="WeakWall3" parent="." unique_id=1830604665 instance=ExtResource("5_ywrx1")]
+position = Vector2(-384, -160)
+metadata/_scene_painted = true
+
+[node name="Wall" parent="." unique_id=251030527 instance=ExtResource("6_nodfw")]
+position = Vector2(112, 0)
+metadata/_scene_painted = true
+
+[node name="Label" type="Label" parent="." unique_id=1279178551]
+modulate = Color(0.93919235, 0, 0.31705505, 1)
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.5
+offset_top = 96.0
+offset_right = 144.5
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"label_something"
+text = "Just like a violin"

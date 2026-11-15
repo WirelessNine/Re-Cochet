@@ -1,9 +1,9 @@
 class_name Player2D
 extends CharacterBody2D
 
-const RETURN_POINT: PackedScene = preload("uid://cfaar6j0h3o0c")
-
 signal obstacle_hit
+
+const RETURN_POINT: PackedScene = preload("uid://cfaar6j0h3o0c")
 
 const SPEED: float = 800.0
 const MIN_DISTANCE_FOR_MAX: float = 200.0

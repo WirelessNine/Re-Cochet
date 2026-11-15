@@ -7,8 +7,7 @@ var activated: bool = false
 @onready var shadow: Sprite2D = %Shadow
 @onready var collision_shape: CollisionShape2D = %CollisionShape
 
-@export var target_obstacle: Obstacle2D
-@export var move_offset: Vector2
+@export var targets: Dictionary[Node2D, Vector2]
 
 
 func _touched() -> void:
@@ -19,7 +18,7 @@ func _touched() -> void:
 	collision_shape.set_deferred(&"disabled", true)
 	shadow.hide()
 
-	_handle_target_obstacle()
+	_handle_target_obstacles()
 
 	var tween: Tween = create_tween()
 
@@ -37,10 +36,7 @@ func _touched() -> void:
 		await get_tree().physics_frame
 
 
-func _handle_target_obstacle() -> void:
-	if not target_obstacle:
-		return
-
-	var tween: Tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
-
-	tween.tween_property(target_obstacle, ^"position", move_offset, 0.2).as_relative()
+func _handle_target_obstacles() -> void:
+	for x: Node2D in targets:
+		var tween: Tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+		tween.tween_property(x, ^"position", targets[x], 0.2).as_relative()

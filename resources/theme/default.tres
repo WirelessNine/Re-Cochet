@@ -26,3 +26,6 @@ button_complete/styles/focus = SubResource("StyleBoxEmpty_voly0")
 button_complete/styles/hover = ExtResource("3_dmh5w")
 button_complete/styles/normal = ExtResource("3_dmh5w")
 button_complete/styles/pressed = ExtResource("3_dmh5w")
+label_something/base_type = &"Label"
+label_something/colors/font_color = Color(1, 1, 1, 1)
+label_something/font_sizes/font_size = 48

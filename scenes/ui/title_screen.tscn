@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://pbgtu8y2ily3" path="res://scenes/levels/level_02.tscn" id="5_r23qo"]
 [ext_resource type="PackedScene" uid="uid://v6w18dbda5ck" path="res://scenes/levels/level_03.tscn" id="6_cfe2f"]
 [ext_resource type="PackedScene" uid="uid://d0vl1kkixfw85" path="res://scenes/levels/level_04.tscn" id="7_6ik4u"]
+[ext_resource type="PackedScene" uid="uid://cawixk167f2hd" path="res://scenes/levels/level_05.tscn" id="8_aqu7r"]
+[ext_resource type="PackedScene" uid="uid://cgykd6c87bild" path="res://scenes/levels/level_06.tscn" id="9_jsbfx"]
+[ext_resource type="PackedScene" uid="uid://dlykvdbaraxgy" path="res://scenes/levels/level_07.tscn" id="10_7oraf"]
+[ext_resource type="PackedScene" uid="uid://cjgwfwlyplh2r" path="res://scenes/levels/level_08.tscn" id="11_lddph"]
 
 [node name="TitleScreen" type="PanelContainer" unique_id=2008179970]
 anchors_preset = 15
@@ -72,18 +76,22 @@ level_name = "Level 4"
 
 [node name="level05" parent="LevelsGrid" unique_id=1645563999 instance=ExtResource("3_w8uqo")]
 layout_mode = 2
+level = ExtResource("8_aqu7r")
 level_name = "Level 5"
 
 [node name="level06" parent="LevelsGrid" unique_id=1308280394 instance=ExtResource("3_w8uqo")]
 layout_mode = 2
+level = ExtResource("9_jsbfx")
 level_name = "Level 6"
 
 [node name="level07" parent="LevelsGrid" unique_id=2110719200 instance=ExtResource("3_w8uqo")]
 layout_mode = 2
+level = ExtResource("10_7oraf")
 level_name = "Level 7"
 
 [node name="level08" parent="LevelsGrid" unique_id=290461502 instance=ExtResource("3_w8uqo")]
 layout_mode = 2
+level = ExtResource("11_lddph")
 level_name = "Level 8"
 
 [node name="Label" type="Label" parent="." unique_id=1279683779]

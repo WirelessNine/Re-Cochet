@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cjgwfwlyplh2r"]
+
+[ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scripts/level_2d.gd" id="1_80sek"]
+[ext_resource type="PackedScene" uid="uid://dhu4mu7mc1ft2" path="res://scenes/player/ball.tscn" id="2_4j84j"]
+[ext_resource type="PackedScene" uid="uid://cfaar6j0h3o0c" path="res://scenes/obstacles/return_point.tscn" id="3_hmphn"]
+[ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="4_xahu4"]
+[ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="5_y0u2e"]
+[ext_resource type="PackedScene" uid="uid://d7puovc8g6ot" path="res://scenes/player/pentagon.tscn" id="6_4j84j"]
+
+[node name="Level08" type="Node2D" unique_id=1967266403]
+script = ExtResource("1_80sek")
+level_id = 7
+canvas_color = Color(0.8117647, 0.827451, 0.6862745, 1)
+max_hits = 6
+
+[node name="Ball" parent="." unique_id=765945013 instance=ExtResource("2_4j84j")]
+unique_name_in_owner = true
+position = Vector2(-256, -256)
+
+[node name="Pentagon" parent="." unique_id=833800454 instance=ExtResource("6_4j84j")]
+position = Vector2(528, 160)
+metadata/_scene_painted = true
+
+[node name="ReturnPoint" parent="." unique_id=1532338156 instance=ExtResource("3_hmphn")]
+unique_name_in_owner = true
+position = Vector2(496, 256)
+metadata/_scene_painted = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=94666358]
+enabled = false
+zoom = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="." unique_id=659194196]
+modulate = Color(0.7294262, 0.74694306, 0.5789778, 1)
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 80.0
+offset_right = 158.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"label_something"
+text = "Extrme Demon"
+
+[node name="Wall" parent="." unique_id=251030527 instance=ExtResource("4_xahu4")]
+position = Vector2(384, -288)
+rotation = -0.7853982
+metadata/_scene_painted = true
+
+[node name="Wall3" parent="." unique_id=1285754719 instance=ExtResource("4_xahu4")]
+position = Vector2(-368, 272)
+rotation = -0.7853982
+metadata/_scene_painted = true
+
+[node name="Wall5" parent="." unique_id=1761596144 instance=ExtResource("4_xahu4")]
+position = Vector2(384, 0)
+rotation = 0.7853982
+metadata/_scene_painted = true
+
+[node name="Wall6" parent="." unique_id=547386796 instance=ExtResource("4_xahu4")]
+position = Vector2(559.99994, 143.99998)
+rotation = -0.6614798
+metadata/_scene_painted = true
+
+[node name="WeakWall" parent="." unique_id=2105004682 instance=ExtResource("5_y0u2e")]
+rotation = -0.7853982
+metadata/_scene_painted = true
+
+[node name="WeakWall2" parent="." unique_id=7039848 instance=ExtResource("5_y0u2e")]
+position = Vector2(0, -272)
+rotation = -0.7853982
+metadata/_scene_painted = true
+
+[node name="WeakWall3" parent="." unique_id=2033328212 instance=ExtResource("5_y0u2e")]
+position = Vector2(-384, -272.00003)
+rotation = 0.7853982
+metadata/_scene_painted = true

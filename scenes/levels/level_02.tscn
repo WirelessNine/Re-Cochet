@@ -4,32 +4,62 @@
 [ext_resource type="PackedScene" uid="uid://dhu4mu7mc1ft2" path="res://scenes/player/ball.tscn" id="2_3acmf"]
 [ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="3_yjjx0"]
 [ext_resource type="PackedScene" uid="uid://d7puovc8g6ot" path="res://scenes/player/pentagon.tscn" id="4_3acmf"]
+[ext_resource type="PackedScene" uid="uid://cfaar6j0h3o0c" path="res://scenes/obstacles/return_point.tscn" id="5_yjjx0"]
 
 [node name="Level02" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_c5o3r")
 level_id = 1
 canvas_color = Color(1, 0.64705884, 0.50980395, 1)
-min_hits_required = 1
+max_hits = 4
 
 [node name="Ball" parent="." unique_id=765945013 instance=ExtResource("2_3acmf")]
 unique_name_in_owner = true
-position = Vector2(0, 144)
+position = Vector2(-384, 0)
+
+[node name="ReturnPoint" parent="." unique_id=1532338156 instance=ExtResource("5_yjjx0")]
+unique_name_in_owner = true
+position = Vector2(512, 0)
+metadata/_scene_painted = true
 
 [node name="Wall" parent="." unique_id=251030527 instance=ExtResource("3_yjjx0")]
-position = Vector2(-368, 144)
-rotation = -0.7853982
+position = Vector2(416, 0)
 metadata/_scene_painted = true
 
-[node name="Wall2" parent="." unique_id=68445748 instance=ExtResource("3_yjjx0")]
-position = Vector2(-368, -192)
+[node name="Wall2" parent="." unique_id=784520512 instance=ExtResource("3_yjjx0")]
+position = Vector2(-512, -256.00006)
 rotation = 0.7853982
+scale = Vector2(0.99999994, 0.99999994)
 metadata/_scene_painted = true
 
-[node name="Wall3" parent="." unique_id=874727129 instance=ExtResource("3_yjjx0")]
-position = Vector2(0, -192)
+[node name="Wall4" parent="." unique_id=1334908057 instance=ExtResource("3_yjjx0")]
+position = Vector2(-512, 15.9999695)
 rotation = -0.7853982
+scale = Vector2(0.99999994, 0.99999994)
+metadata/_scene_painted = true
+
+[node name="Wall3" parent="." unique_id=2052144146 instance=ExtResource("3_yjjx0")]
+position = Vector2(512, -256)
+rotation = -0.7853982
+scale = Vector2(0.99999994, 0.99999994)
 metadata/_scene_painted = true
 
 [node name="Pentagon" parent="." unique_id=833800454 instance=ExtResource("4_3acmf")]
-position = Vector2(-192, -24)
+position = Vector2(368, 0)
 metadata/_scene_painted = true
+
+[node name="Label" type="Label" parent="." unique_id=1512401418]
+modulate = Color(0.9999972, 0.506266, 0.30398524, 1)
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -9.0
+offset_right = 20.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"label_something"
+text = "Haha boing boing"

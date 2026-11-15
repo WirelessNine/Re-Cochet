@@ -2,13 +2,74 @@
 
 [ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scripts/level_2d.gd" id="1_nanf4"]
 [ext_resource type="PackedScene" uid="uid://dhu4mu7mc1ft2" path="res://scenes/player/ball.tscn" id="2_j6e47"]
+[ext_resource type="PackedScene" uid="uid://cfaar6j0h3o0c" path="res://scenes/obstacles/return_point.tscn" id="3_nanf4"]
+[ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="4_j6e47"]
+[ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="6_ypi4k"]
+[ext_resource type="PackedScene" uid="uid://d7puovc8g6ot" path="res://scenes/player/pentagon.tscn" id="7_cw75u"]
 
 [node name="Level04" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_nanf4")
 level_id = 3
 canvas_color = Color(0.74509805, 0.60784316, 1, 1)
-min_hits_required = 4
+max_hits = 6
 
 [node name="Ball" parent="." unique_id=765945013 instance=ExtResource("2_j6e47")]
 unique_name_in_owner = true
-position = Vector2(-555, 0)
+position = Vector2(-384, 0)
+
+[node name="ReturnPoint" parent="." unique_id=1532338156 instance=ExtResource("3_nanf4")]
+unique_name_in_owner = true
+position = Vector2(0, -80)
+metadata/_scene_painted = true
+
+[node name="Pentagon" parent="." unique_id=833800454 instance=ExtResource("7_cw75u")]
+position = Vector2(48, 112)
+metadata/_scene_painted = true
+
+[node name="WeakWall" parent="." unique_id=2105004682 instance=ExtResource("4_j6e47")]
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="WeakWall2" parent="." unique_id=1736774971 instance=ExtResource("4_j6e47")]
+position = Vector2(-464, 0)
+metadata/_scene_painted = true
+
+[node name="WeakWall3" parent="." unique_id=233456841 instance=ExtResource("4_j6e47")]
+position = Vector2(-304, 0)
+metadata/_scene_painted = true
+
+[node name="WeakWall4" parent="." unique_id=215329325 instance=ExtResource("4_j6e47")]
+position = Vector2(-384, -64)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="WeakWall5" parent="." unique_id=340986273 instance=ExtResource("4_j6e47")]
+position = Vector2(-384, 64)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="WeakWall6" parent="." unique_id=83228973 instance=ExtResource("4_j6e47")]
+position = Vector2(304, 48)
+metadata/_scene_painted = true
+
+[node name="Wall" parent="." unique_id=251030527 instance=ExtResource("6_ypi4k")]
+position = Vector2(48, 160)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="Label" type="Label" parent="." unique_id=207003032]
+modulate = Color(0.6536184, 0.41993684, 0.99999255, 1)
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -191.0
+offset_top = -192.0
+offset_right = 191.0
+offset_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"label_something"
+text = "You are trapped..."

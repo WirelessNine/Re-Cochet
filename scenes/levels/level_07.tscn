@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://dlykvdbaraxgy"]
+
+[ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scripts/level_2d.gd" id="1_4h4ws"]
+[ext_resource type="PackedScene" uid="uid://dhu4mu7mc1ft2" path="res://scenes/player/ball.tscn" id="2_rd35g"]
+[ext_resource type="PackedScene" uid="uid://cfaar6j0h3o0c" path="res://scenes/obstacles/return_point.tscn" id="3_ubdts"]
+[ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="6_30ggj"]
+[ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="7_ifo3o"]
+
+[node name="Level07" type="Node2D" unique_id=1967266403]
+script = ExtResource("1_4h4ws")
+level_id = 6
+canvas_color = Color(0.8666667, 0.6431373, 0.62352943, 1)
+max_hits = 9
+
+[node name="Ball" parent="." unique_id=765945013 instance=ExtResource("2_rd35g")]
+unique_name_in_owner = true
+position = Vector2(-336, 0)
+
+[node name="ReturnPoint" parent="." unique_id=1532338156 instance=ExtResource("3_ubdts")]
+unique_name_in_owner = true
+position = Vector2(256, -144)
+metadata/_scene_painted = true
+
+[node name="Wall" parent="." unique_id=251030527 instance=ExtResource("7_ifo3o")]
+position = Vector2(-320, 64)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="Wall2" parent="." unique_id=1322138301 instance=ExtResource("7_ifo3o")]
+position = Vector2(-192, 64)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="Wall3" parent="." unique_id=897307385 instance=ExtResource("7_ifo3o")]
+position = Vector2(-64, 64)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="Wall4" parent="." unique_id=1783318799 instance=ExtResource("7_ifo3o")]
+position = Vector2(64, 64)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="Wall5" parent="." unique_id=1251112435 instance=ExtResource("7_ifo3o")]
+position = Vector2(192, 64)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="Wall6" parent="." unique_id=617960608 instance=ExtResource("7_ifo3o")]
+position = Vector2(320, 64)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="Wall7" parent="." unique_id=883971621 instance=ExtResource("7_ifo3o")]
+position = Vector2(-320, -64)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="Wall8" parent="." unique_id=1987348756 instance=ExtResource("7_ifo3o")]
+position = Vector2(-192, -64)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="Wall9" parent="." unique_id=1978638143 instance=ExtResource("7_ifo3o")]
+position = Vector2(-192, -64)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="Wall10" parent="." unique_id=874063533 instance=ExtResource("7_ifo3o")]
+position = Vector2(-64, -64)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="Wall11" parent="." unique_id=446452744 instance=ExtResource("7_ifo3o")]
+position = Vector2(64, -64)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="WeakWall3" parent="." unique_id=2105004682 instance=ExtResource("6_30ggj")]
+position = Vector2(400, 0)
+metadata/_scene_painted = true
+
+[node name="WeakWall5" parent="." unique_id=494151669 instance=ExtResource("6_30ggj")]
+position = Vector2(400, -144)
+metadata/_scene_painted = true
+
+[node name="WeakWall2" parent="." unique_id=1757821425 instance=ExtResource("6_30ggj")]
+metadata/_scene_painted = true
+
+[node name="WeakWall4" parent="." unique_id=803391264 instance=ExtResource("6_30ggj")]
+position = Vector2(-400, 0)
+metadata/_scene_painted = true
+
+[node name="Wall12" parent="." unique_id=1238323330 instance=ExtResource("7_ifo3o")]
+position = Vector2(128, -144)
+metadata/_scene_painted = true
+
+[node name="Wall13" parent="." unique_id=2080475135 instance=ExtResource("7_ifo3o")]
+position = Vector2(192, -224)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="Wall14" parent="." unique_id=998013029 instance=ExtResource("7_ifo3o")]
+position = Vector2(336, -224)
+rotation = 1.5707964
+metadata/_scene_painted = true
+
+[node name="Label" type="Label" parent="." unique_id=659194196]
+modulate = Color(0.7968863, 0.5219466, 0.5005459, 1)
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -144.0
+offset_right = 92.0
+offset_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"label_something"
+text = "Bouncy castle"
