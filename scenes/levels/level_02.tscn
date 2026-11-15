@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://pbgtu8y2ily3"]
+
+[ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scripts/level_2d.gd" id="1_c5o3r"]
+[ext_resource type="PackedScene" uid="uid://dhu4mu7mc1ft2" path="res://scenes/player/ball.tscn" id="2_3acmf"]
+[ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="3_yjjx0"]
+[ext_resource type="PackedScene" uid="uid://d7puovc8g6ot" path="res://scenes/player/pentagon.tscn" id="4_3acmf"]
+
+[node name="Level02" type="Node2D" unique_id=1967266403]
+script = ExtResource("1_c5o3r")
+level_id = 1
+canvas_color = Color(1, 0.64705884, 0.50980395, 1)
+min_hits_required = 1
+
+[node name="Camera" type="Camera2D" parent="." unique_id=271012844]
+unique_name_in_owner = true
+zoom = Vector2(0.5, 0.5)
+process_callback = 0
+
+[node name="Ball" parent="." unique_id=765945013 instance=ExtResource("2_3acmf")]
+unique_name_in_owner = true
+position = Vector2(0, 144)
+
+[node name="Wall" parent="." unique_id=251030527 instance=ExtResource("3_yjjx0")]
+position = Vector2(-368, 144)
+rotation = -0.7853982
+metadata/_scene_painted = true
+
+[node name="Wall2" parent="." unique_id=68445748 instance=ExtResource("3_yjjx0")]
+position = Vector2(-368, -192)
+rotation = 0.7853982
+metadata/_scene_painted = true
+
+[node name="Wall3" parent="." unique_id=874727129 instance=ExtResource("3_yjjx0")]
+position = Vector2(0, -192)
+rotation = -0.7853982
+metadata/_scene_painted = true
+
+[node name="Pentagon" parent="." unique_id=833800454 instance=ExtResource("4_3acmf")]
+position = Vector2(-192, -24)
+metadata/_scene_painted = true

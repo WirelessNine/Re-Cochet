@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://c4f18m7owfw4d"]
 
 [ext_resource type="PackedScene" uid="uid://dhu4mu7mc1ft2" path="res://scenes/player/ball.tscn" id="1_m802k"]
-[ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scenes/levels/level_2d.gd" id="1_uvc87"]
+[ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scripts/level_2d.gd" id="1_uvc87"]
 [ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="2_i2aat"]
+[ext_resource type="PackedScene" uid="uid://d7puovc8g6ot" path="res://scenes/player/pentagon.tscn" id="4_uvc87"]
 
 [node name="Level01" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_uvc87")
@@ -19,4 +20,12 @@ unique_name_in_owner = true
 
 [node name="Wall" parent="." unique_id=251030527 instance=ExtResource("2_i2aat")]
 position = Vector2(-368, 0)
+metadata/_scene_painted = true
+
+[node name="Wall2" parent="." unique_id=1206347571 instance=ExtResource("2_i2aat")]
+position = Vector2(496, 0)
+metadata/_scene_painted = true
+
+[node name="Pentagon" parent="." unique_id=833800454 instance=ExtResource("4_uvc87")]
+position = Vector2(456, 0)
 metadata/_scene_painted = true

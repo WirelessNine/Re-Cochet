@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bnuvk0xuxhrge" path="res://resources/textures/ui/pattern.tres" id="2_aqpy5"]
 [ext_resource type="PackedScene" uid="uid://cf7bdm0yyjqnq" path="res://scenes/ui/level_button.tscn" id="3_w8uqo"]
 [ext_resource type="PackedScene" uid="uid://c4f18m7owfw4d" path="res://scenes/levels/level_01.tscn" id="4_a4ium"]
+[ext_resource type="PackedScene" uid="uid://pbgtu8y2ily3" path="res://scenes/levels/level_02.tscn" id="5_r23qo"]
+[ext_resource type="PackedScene" uid="uid://v6w18dbda5ck" path="res://scenes/levels/level_03.tscn" id="6_cfe2f"]
+[ext_resource type="PackedScene" uid="uid://d0vl1kkixfw85" path="res://scenes/levels/level_04.tscn" id="7_6ik4u"]
 
 [node name="TitleScreen" type="PanelContainer" unique_id=2008179970]
 anchors_preset = 15
@@ -54,14 +57,17 @@ level_name = "Level 1"
 
 [node name="level02" parent="LevelsGrid" unique_id=1469041270 instance=ExtResource("3_w8uqo")]
 layout_mode = 2
+level = ExtResource("5_r23qo")
 level_name = "Level 2"
 
 [node name="level03" parent="LevelsGrid" unique_id=2136381493 instance=ExtResource("3_w8uqo")]
 layout_mode = 2
+level = ExtResource("6_cfe2f")
 level_name = "Level 3"
 
 [node name="level04" parent="LevelsGrid" unique_id=1393824517 instance=ExtResource("3_w8uqo")]
 layout_mode = 2
+level = ExtResource("7_6ik4u")
 level_name = "Level 4"
 
 [node name="level05" parent="LevelsGrid" unique_id=1645563999 instance=ExtResource("3_w8uqo")]

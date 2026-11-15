@@ -15,20 +15,23 @@
 				"a3013ec8-c374-41d7-b64b-28aba09d9969",
 				"cff94f93-1bad-4d51-ab22-8d3fa99391ea",
 				"b55cbba3-68ca-4c69-a954-f33807aa72ec",
-				"4ac2cc8e-cfb7-4786-90d2-fa1d9a61010d"
+				"4ac2cc8e-cfb7-4786-90d2-fa1d9a61010d",
+				"78ecab1d-136d-4ff2-81f8-cb1b7ab26a32",
+				"e7135cc4-baf6-4cff-9df7-faec6e2f9ef7",
+				"15da2e28-f2e8-4024-9271-e2b9a757364b"
 			]
 		},
 		{
 			"uuid": "828bb566-867f-4d66-a165-dec5c7fbb0fa",
 			"title": "Doing",
-			"tasks": [
-				"516876dc-568e-4625-8de3-052683bde682"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"a387b9b1-f22c-4ca6-b675-9406919649a1",
+				"516876dc-568e-4625-8de3-052683bde682",
 				"44317aa4-ef18-4d75-b461-ed2508df905a",
 				"bc3d288f-4a3c-4af4-b8bd-af0749d01c41",
 				"96fe7c89-0848-4b08-9a26-d796a7021d03",
@@ -215,6 +218,34 @@
 		{
 			"uuid": "4ac2cc8e-cfb7-4786-90d2-fa1d9a61010d",
 			"title": "Precompile particles",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "a387b9b1-f22c-4ca6-b675-9406919649a1",
+			"title": "Create levels",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "78ecab1d-136d-4ff2-81f8-cb1b7ab26a32",
+			"title": "Make return point appear after getting required hits",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "e7135cc4-baf6-4cff-9df7-faec6e2f9ef7",
+			"title": "Dont allow exiting on level transition",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "15da2e28-f2e8-4024-9271-e2b9a757364b",
+			"title": "Add teleporter obstacle",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []
