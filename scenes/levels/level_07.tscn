@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dhu4mu7mc1ft2" path="res://scenes/player/ball.tscn" id="2_rd35g"]
 [ext_resource type="PackedScene" uid="uid://cfaar6j0h3o0c" path="res://scenes/obstacles/return_point.tscn" id="3_ubdts"]
 [ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="6_30ggj"]
+[ext_resource type="Texture2D" uid="uid://bnuvk0xuxhrge" path="res://resources/textures/ui/pattern.tres" id="6_knxqw"]
 [ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="7_ifo3o"]
 
 [node name="Level07" type="Node2D" unique_id=1967266403]
@@ -121,3 +122,20 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"label_something"
 text = "Bouncy castle"
+
+[node name="Background" type="TextureRect" parent="." unique_id=1250617616]
+modulate = Color(1, 1, 1, 0.0627451)
+z_index = -2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_knxqw")
+stretch_mode = 1

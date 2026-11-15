@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="107.48023"
-     inkscape:cy="75.130095"
+     inkscape:zoom="16"
+     inkscape:cx="19.125"
+     inkscape:cy="138.71875"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -82,22 +82,11 @@
        y="0.1984375"
        ry="0.73598397"
        rx="0.62876701" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-dasharray:none;stroke-opacity:1"
-       id="rect18"
-       width="7.9368329"
-       height="7.9368329"
-       x="0"
-       y="33.866665"
-       ry="3.9684165"
-       inkscape:label="ball" />
     <path
-       id="path18"
-       style="fill:#ffffff;fill-opacity:1;stroke-width:0.396875;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
-       inkscape:transform-center-x="0.22575522"
-       inkscape:transform-center-y="-0.22575515"
-       d="M 10.294949,43.67812 C 9.9702558,44.002813 5.421531,41.872028 5.3026851,41.42849 5.1838392,40.984951 7.3350049,38.833785 7.7785439,38.952631 c 0.4435387,0.118845 2.8410971,4.400796 2.5164051,4.725489 z"
-       sodipodi:nodetypes="ssss" />
+       id="rect18"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.529167;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:label="ball"
+       d="M 3.9682332 33.866667 C 1.7697305 33.866667 0 35.636397 0 37.8349 C -6.2665922e-16 40.033403 1.7697305 41.80365 3.9682332 41.80365 C 6.166736 41.80365 7.9369832 40.033403 7.9369832 37.8349 C 7.9369832 35.636397 6.166736 33.866667 3.9682332 33.866667 z M 2.172994 34.997347 C 2.7179074 34.997347 3.1563965 35.441244 3.1563965 35.992635 C 3.1563965 36.544026 2.7179074 36.987923 2.172994 36.987923 C 1.6280806 36.987923 1.1895915 36.544026 1.1895915 35.992635 C 1.1895915 35.441244 1.6280806 34.997347 2.172994 34.997347 z " />
     <path
        sodipodi:type="star"
        style="fill:#ffe194;fill-opacity:1;stroke:none;stroke-width:0.42350845;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"

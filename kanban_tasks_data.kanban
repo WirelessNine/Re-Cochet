@@ -27,6 +27,7 @@
 			"uuid": "84f2846c-d4f7-4593-8c98-50cf39b569c8",
 			"title": "Done",
 			"tasks": [
+				"56a1d41f-55f8-492f-b889-1cd1b72398b3",
 				"dfb99cb1-7e68-496d-8d8b-0bb72b863b93",
 				"c010a7d4-206f-4ca4-8770-19936add06ba",
 				"d7b7a6a3-e34e-4a5d-b762-40ae3195e542",
@@ -270,6 +271,13 @@
 		{
 			"uuid": "dfb99cb1-7e68-496d-8d8b-0bb72b863b93",
 			"title": "Tweak the player",
+			"description": "",
+			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
+			"steps": []
+		},
+		{
+			"uuid": "56a1d41f-55f8-492f-b889-1cd1b72398b3",
+			"title": "Add background to levels",
 			"description": "",
 			"category": "1260f416-2ed4-49c4-ae17-3579201de61c",
 			"steps": []

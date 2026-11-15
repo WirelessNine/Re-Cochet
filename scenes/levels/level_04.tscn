@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="4_j6e47"]
 [ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="6_ypi4k"]
 [ext_resource type="PackedScene" uid="uid://d7puovc8g6ot" path="res://scenes/player/pentagon.tscn" id="7_cw75u"]
+[ext_resource type="Texture2D" uid="uid://bnuvk0xuxhrge" path="res://resources/textures/ui/pattern.tres" id="7_gkpor"]
 
 [node name="Level04" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_nanf4")
@@ -73,3 +74,20 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"label_something"
 text = "You are trapped..."
+
+[node name="Background" type="TextureRect" parent="." unique_id=1442082778]
+modulate = Color(1, 1, 1, 0.0627451)
+z_index = -2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_gkpor")
+stretch_mode = 1

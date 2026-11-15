@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="4_xahu4"]
 [ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="5_y0u2e"]
 [ext_resource type="PackedScene" uid="uid://d7puovc8g6ot" path="res://scenes/player/pentagon.tscn" id="6_4j84j"]
+[ext_resource type="Texture2D" uid="uid://bnuvk0xuxhrge" path="res://resources/textures/ui/pattern.tres" id="7_hmphn"]
 
 [node name="Level08" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_80sek")
@@ -25,23 +26,6 @@ metadata/_scene_painted = true
 unique_name_in_owner = true
 position = Vector2(496, 256)
 metadata/_scene_painted = true
-
-[node name="Label" type="Label" parent="." unique_id=659194196]
-modulate = Color(0.7294262, 0.74694306, 0.5789778, 1)
-z_index = -1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -160.0
-offset_top = 80.0
-offset_right = 158.0
-offset_bottom = 132.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_type_variation = &"label_something"
-text = "Extrme Demon"
 
 [node name="Wall" parent="." unique_id=251030527 instance=ExtResource("4_xahu4")]
 position = Vector2(384, -288)
@@ -76,3 +60,37 @@ metadata/_scene_painted = true
 position = Vector2(-384, -272.00003)
 rotation = 0.7853982
 metadata/_scene_painted = true
+
+[node name="Label" type="Label" parent="." unique_id=659194196]
+modulate = Color(0.7294262, 0.74694306, 0.5789778, 1)
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 80.0
+offset_right = 158.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"label_something"
+text = "Extrme Demon"
+
+[node name="Background" type="TextureRect" parent="." unique_id=1451695095]
+modulate = Color(1, 1, 1, 0.09803922)
+z_index = -2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_hmphn")
+stretch_mode = 1

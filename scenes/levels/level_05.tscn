@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bmm0nbe82ftka" path="res://scenes/obstacles/string.tscn" id="5_pe0ra"]
 [ext_resource type="PackedScene" uid="uid://7a6ncqx86fmf" path="res://scenes/obstacles/weak_wall.tscn" id="5_ywrx1"]
 [ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="6_nodfw"]
+[ext_resource type="Texture2D" uid="uid://bnuvk0xuxhrge" path="res://resources/textures/ui/pattern.tres" id="7_836dv"]
 
 [node name="Level05" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_hqfam")
@@ -68,3 +69,20 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"label_something"
 text = "Just like a violin"
+
+[node name="Background" type="TextureRect" parent="." unique_id=202172591]
+modulate = Color(1, 1, 1, 0.0627451)
+z_index = -2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_836dv")
+stretch_mode = 1

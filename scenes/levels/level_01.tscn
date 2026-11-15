@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dhu4mu7mc1ft2" path="res://scenes/player/ball.tscn" id="1_m802k"]
 [ext_resource type="Script" uid="uid://du4roo37xvmjx" path="res://scripts/level_2d.gd" id="1_uvc87"]
+[ext_resource type="Texture2D" uid="uid://bnuvk0xuxhrge" path="res://resources/textures/ui/pattern.tres" id="4_uvc87"]
 [ext_resource type="PackedScene" uid="uid://cfaar6j0h3o0c" path="res://scenes/obstacles/return_point.tscn" id="5_qdh5e"]
 
 [node name="Level01" type="Node2D" unique_id=1967266403]
@@ -34,3 +35,20 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"label_something"
 text = "Balls?"
+
+[node name="Background" type="TextureRect" parent="." unique_id=90137296]
+modulate = Color(1, 1, 1, 0.0627451)
+z_index = -2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_uvc87")
+stretch_mode = 1

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d7puovc8g6ot" path="res://scenes/player/pentagon.tscn" id="5_s7m4s"]
 [ext_resource type="PackedScene" uid="uid://ipnpybmkm30b" path="res://scenes/obstacles/wall.tscn" id="6_tg547"]
 [ext_resource type="PackedScene" uid="uid://cg46m5aphtvcl" path="res://scenes/obstacles/triangle.tscn" id="7_yc2un"]
+[ext_resource type="Texture2D" uid="uid://bnuvk0xuxhrge" path="res://resources/textures/ui/pattern.tres" id="9_6h3uw"]
 
 [node name="Level06" type="Node2D" unique_id=1967266403]
 script = ExtResource("1_tbrpi")
@@ -75,3 +76,20 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_type_variation = &"label_something"
 text = "mmfgh... triangle..."
+
+[node name="Background" type="TextureRect" parent="." unique_id=97185276]
+modulate = Color(1, 1, 1, 0.31764707)
+z_index = -2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_6h3uw")
+stretch_mode = 1
