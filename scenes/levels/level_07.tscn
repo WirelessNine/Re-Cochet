@@ -62,11 +62,6 @@ position = Vector2(-192, -64)
 rotation = 1.5707964
 metadata/_scene_painted = true
 
-[node name="Wall9" parent="." unique_id=1978638143 instance=ExtResource("7_ifo3o")]
-position = Vector2(-192, -64)
-rotation = 1.5707964
-metadata/_scene_painted = true
-
 [node name="Wall10" parent="." unique_id=874063533 instance=ExtResource("7_ifo3o")]
 position = Vector2(-64, -64)
 rotation = 1.5707964
@@ -139,3 +134,4 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_knxqw")
 stretch_mode = 1
+metadata/_edit_lock_ = true

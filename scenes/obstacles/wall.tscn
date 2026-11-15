@@ -27,4 +27,3 @@ debug_color = Color(0, 0.5950001, 0.7, 0)
 [node name="Hit" type="AudioStreamPlayer" parent="." unique_id=1773874511]
 unique_name_in_owner = true
 stream = ExtResource("4_uor2m")
-stream_paused = true

@@ -12,11 +12,11 @@ max_hits = 1
 
 [node name="Ball" parent="." unique_id=765945013 instance=ExtResource("1_m802k")]
 unique_name_in_owner = true
-position = Vector2(-512, 0)
+position = Vector2(-384, 0)
 
 [node name="ReturnPoint" parent="." unique_id=1532338156 instance=ExtResource("5_qdh5e")]
 unique_name_in_owner = true
-position = Vector2(512, 0)
+position = Vector2(384, 0)
 metadata/_scene_painted = true
 
 [node name="Label" type="Label" parent="." unique_id=2030107488]
@@ -52,3 +52,4 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_uvc87")
 stretch_mode = 1
+metadata/_edit_lock_ = true
